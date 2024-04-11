@@ -59,7 +59,7 @@ function App() {
                 </li>
                 <li>
                   <a href="#contact" className="text-gray-400 hover:text-white cursor-pointer">
-                    Contact
+                    Get in touch
                   </a>
                 </li>
               </ul>
