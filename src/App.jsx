@@ -57,6 +57,11 @@ function App() {
                     About me
                   </a>
                 </li>
+                <li>
+                  <a href="#contact" className="text-gray-400 hover:text-white cursor-pointer">
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -380,7 +385,7 @@ function App() {
           <h1 className="text-2xl font-semibold ">
             Get in touch
           </h1>
-          <div className="bg-gray-400 mt-5 rounded-3xl p-6">
+          <div className="bg-gray-500 mt-5 rounded-3xl p-6">
             <div>
               <p className="pt-5 pl-2 font-mono">
                 I'm currently avaliable to take on new projects. So feel free to sent me a message about anything that you want to run past me. You can contact anytime at 24/7
@@ -404,13 +409,13 @@ function App() {
                     <p className="pl-4 text-black text-md font-semibold">irfan188iqbal@gmail.com</p>
                   </div>
                   <div className="flex">
-                    <li className="bg-white w-12 h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl">
+                    <li className="bg-white w-12 h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl animate-bounce">
                       <div className="flex">
-                        <img src={call} className="w-8 h-8" alt="" />
+                        <img src={call} className="w-8 h-8 " alt="" />
 
                       </div>
                     </li>
-                    <p className="pl-4 text-black text-md font-semibold">+91 8139024188</p>
+                    <p className="pl-4 text-black  text-md font-semibold">+91 8139024188</p>
                   </div>
                 </ul>
               </div>
