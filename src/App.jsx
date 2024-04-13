@@ -70,11 +70,11 @@ function App() {
       <main className="relative mt-28">
         {/* Intro/Banner section */}
         <section>
-          <div className="container m-auto px-4 pt-2 md:pt-12 pb-3 md:pb-12 flex flex-col sm:flex-row gap-6 text-center sm:text-left">
+          <div className="container  px-4 pt-2 md:pt-12 pb-3 md:pb-12 flex flex-col sm:flex-row gap-6 text-center sm:text-left">
             <div>
               <h2 className="font-bold text-3xl md:text-4xl ">Hello,I am Muhammed Irfan</h2>
               <div>
-                <h2 className="font-bold text-2xl md:text-4xl mt-1 text-blue-600 gradiant-text">Full Stack Developer</h2>
+                <h2 className="font-bold text-xl md:text-4xl mt-1 text-blue-600 gradiant-text">Full Stack Developer</h2>
                 <div>
                   <h2 className=" font-sans text-md mt-1  text-gray-400" >With a focus on <span className="text-sky-500">React</span></h2>
                 </div>
