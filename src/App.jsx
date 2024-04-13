@@ -41,25 +41,25 @@ function App() {
           <div className="flex flex-col gap-4 sm:flex-row justify-end">
 
             <div>
-              <ul className="flex gap-12">
+              <ul className="flex gap-6 md:gap-12">
                 <li>
-                  <a href="#projects" className="text-gray-400 hover:text-white cursor-pointer">
+                  <a href="#projects" className=" text-sm md:text-lg text-gray-400 hover:text-white cursor-pointer font-semibold">
                     Projects
                   </a>
                 </li>
                 <li>
-                  <a href="#technologies" className="text-gray-400 hover:text-white cursor-pointer">
+                  <a href="#technologies" className="text-sm md:text-lg text-gray-400 hover:text-white cursor-pointer font-semibold">
                     Technologies
                   </a>
                 </li>
                 <li>
-                  <a href="#aboutme" className="text-gray-400 hover:text-white cursor-pointer">
-                    About me
+                  <a href="#aboutme" className=" text-sm md:text-lg text-gray-400 hover:text-white cursor-pointer font-semibold">
+                    About
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-gray-400 hover:text-white cursor-pointer">
-                    Get in touch
+                  <a href="#contact" className="text-sm md:text-lg text-gray-400 hover:text-white cursor-pointer font-semibold">
+                    Contacts
                   </a>
                 </li>
               </ul>
@@ -70,24 +70,24 @@ function App() {
       <main className="relative mt-28">
         {/* Intro/Banner section */}
         <section>
-          <div className="container m-auto px-4 pt-12 pb-12 sm:pt-20 flex flex-col sm:flex-row gap-6 text-center sm:text-left">
+          <div className="container m-auto px-4 pt-2 md:pt-12 pb-3 md:pb-12 flex flex-col sm:flex-row gap-6 text-center sm:text-left">
             <div>
-              <h2 className="font-bold text-4xl ">Hello,I am Muhammed Irfan</h2>
+              <h2 className="font-bold text-3xl md:text-4xl ">Hello,I am Muhammed Irfan</h2>
               <div>
-                <h2 className="font-bold text-4xl mt-1 text-blue-600 gradiant-text">Full Stack Developer</h2>
+                <h2 className="font-bold text-2xl md:text-4xl mt-1 text-blue-600 gradiant-text">Full Stack Developer</h2>
                 <div>
                   <h2 className=" font-sans text-md mt-1  text-gray-400" >With a focus on <span className="text-sky-500">React</span></h2>
                 </div>
               </div>
 
-              <p className="mt-4 text-gray-400">
+              <p className="mt-4 text-gray-400 text-center md:text-justify">
                 As a passionate self-taught Full Stack Developer specializing in MERN technology, I transform ideas into user-friendly applications. I'm eager to join dynamic teams, contribute my skills, drive innovation, and create something amazing together. Let's connect!
               </p>
               <a href={
                 Muhammed_Irfan_Resume
               } download >
 
-                <div className="button">
+                <div className="button ">
                   <div className="button-wrapper">
                     <div className="text">Resume</div>
                     <span className="icon animate-bounce ">
@@ -100,7 +100,7 @@ function App() {
               </a>
             </div>
             <div className="relative">
-              <img src={Profile} className="tansform hover:scale-95 duration-150 relative z-10 w-[280px] m-auto md-h-[450px] sm:h-[430px] sm:w-[880px] " />
+              <img src={Profile} className="tansform hover:scale-95 duration-150 relative z-10 w-[200px] m-auto h-[300px] md:h-[430px] md:w-[880px] " />
             </div>
           </div>
         </section>
@@ -108,12 +108,12 @@ function App() {
         {/* Projects section */}
 
         <section id="projects">
-          <div className="container m-auto px-4 sm:py-12">
-            <h2 className="text-2xl font-semibold">Projects</h2>
+          <div className="container m-auto px-4 py-2 md:py-12">
+            <h2 className="text-xl md:text-2xl font-semibold">Projects</h2>
             <div className="flex flex-col sm:flex-row gap-10 mt-11">
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={Project1} className=" transfrom hover:scale-125 duration-150 w-full h-auto rounded" />
-                <h3 className="text-2xl font-semibold mt-8">
+                <h3 className="text-xl md:text-2xl font-semibold mt-8">
                   Sevensky
                 </h3>
                 <p className="text-gray-400 text-sm mt-2">
@@ -121,7 +121,7 @@ function App() {
                   a MERN stack-based real estate platform featuring real-time chat (Socket.io), secure payments (Stripe), and seamless navigation (Google Maps). Leveraged Axios interceptors for efficient data flow and utilized Tailwind CSS for a responsive UI. Result: An innovative and user-friendly real estate experience.
 
                 </p>
-                <div className="flex mt-12 gap-6 ">
+                <div className="flex mt-5 md:mt-12 gap-6 ">
                   <button className="flex-1 text-sm py-2 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700" onClick={() => window.location.href = "https://zuus.onrender.com"}>
                     Live preview
                   </button>
@@ -156,7 +156,7 @@ function App() {
               </div>
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={Project3} className="w-full h-auto transfrom hover:scale-125 duration-150 rounded" />
-                <h3 className="text-2xl font-semibold mt-8">
+                <h3 className="text-xl md:text-2xl font-semibold mt-8">
                   Zuus
                 </h3>
                 <p className="text-gray-400 text-sm mt-2">
@@ -165,7 +165,7 @@ function App() {
                   In the client-side, implemented features include user authentication, productlisting, wishlist, shopping cart, OTP verification, profile management, ordertracking and cancellation, and Razorpay payment integration.
 
                 </p>
-                <div className="flex mt-12 gap-6 ">
+                <div className="flex mt-5 md:mt-12 gap-6 ">
                   <button className="flex-1 text-sm py-2 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700" onClick={() => window.location.href = "https://zuus.onrender.com"}>
                     Live preview
                   </button>
@@ -201,14 +201,14 @@ function App() {
             <div className="flex flex-col sm:flex-row  gap-10 mt-11">
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={Project2} className="transfrom hover:scale-125 duration-150 w-full h-auto rounded" />
-                <h3 className="text-2xl font-semibold mt-8">
+                <h3 className="text-xl md:text-2xl font-semibold mt-8">
                   Weather App
                 </h3>
                 <p className="text-gray-400 text-sm mt-2">
 
                   This project is a React weather application that utilizes the OpenWeatherMap API to fetch weather data for a given location. It also incorporates Mapbox to retrieve the user's exact location for accurate weather information.
                 </p>
-                <div className="flex mt-12 gap-6 ">
+                <div className="flex mt-5 md:mt-12 gap-6 ">
                   <button className="flex-1 text-sm py-2 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700" onClick={() => window.location.href = "https://zuus.onrender.com"}>
                     Live preview
                   </button>
@@ -245,7 +245,7 @@ function App() {
               </div>
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={processing} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">
+                <h3 className="text-xl md:text-2xl font-semibold mt-8">
                   project 4
                 </h3>
                 <p className="text-gray-400 text-sm mt-2">
@@ -258,100 +258,100 @@ function App() {
           </div>
         </section>
         {/* Technoglies section */}
-        <section className="py-10" id="technologies">
+        <section className=" py-6 md:py-10" id="technologies">
           <div className="container m-auto px-4">
-            <h2 className="text-2xl font-semibold">Technologies</h2>
-            <div className="mt-14">
+            <h2 className="text-xl md:text-2xl font-semibold">Technologies</h2>
+            <div className="mt-9 md:mt-14">
               <div>
                 <div className="flex justify-between items-center">
                   <h2 className="font-semibold">HTML</h2>
-                  <p className="text-gray-500">Advanced</p>
+                  <p className="text-sm text-gray-500">Advanced</p>
                 </div>
-                <span className="w-[80%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
+                <span className="w-[80%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
               </div>
-              <div className="mt-8">
+              <div className="mt-6 md:mt-8">
                 <div className="flex justify-between items-center">
                   <h2 className="font-semibold">CSS, Sass & Bootstrap</h2>
-                  <p className="text-gray-500">Advanced</p>
+                  <p className="text-sm text-gray-500">Advanced</p>
                 </div>
-                <span className="w-[75%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
+                <span className="w-[75%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
               </div>
-              <div className="mt-8">
+              <div className="mt-6 md:mt-8">
                 <div className="flex justify-between items-center">
                   <h2 className="font-semibold">
                     JavaScript
                   </h2>
-                  <p className="text-gray-500">Advanced</p>
+                  <p className=" text-sm text-gray-500">Advanced</p>
                 </div>
-                <span className="w-[90%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
+                <span className="w-[90%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
               </div>
-              <div className="mt-8">
+              <div className="mt-6 md:mt-8">
                 <div className="flex justify-between items-center">
                   <h2 className="font-semibold">
                     node js
                   </h2>
-                  <p className="text-gray-500">Advanced</p>
+                  <p className="text-sm text-gray-500">Advanced</p>
                 </div>
-                <span className="w-[95%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
+                <span className="w-[95%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
               </div>
-              <div className="mt-8">
+              <div className="mt-6 md:mt-8">
                 <div className="flex justify-between items-center">
                   <h2 className="font-semibold">
                     MongoDB
                   </h2>
-                  <p className="text-gray-500">Advanced</p>
+                  <p className="text-sm text-gray-500">Advanced</p>
                 </div>
-                <span className="w-[89%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
+                <span className="w-[89%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
               </div>
-              <div className="mt-8">
+              <div className="mt-6 md:mt-8">
                 <div className="flex justify-between items-center">
                   <h2 className="font-semibold">React</h2>
-                  <p className="text-gray-500">Advanced</p>
+                  <p className="text-sm text-gray-500">Advanced</p>
                 </div>
-                <span className="w-[90%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
+                <span className="w-[90%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
               </div>
             </div>
           </div>
         </section>
         {/* Additional skills section */}
         <section>
-          <div className="container m-auto px-4 py-14">
-            <h2 className="text-2xl font-semibold">
+          <div className="container m-auto px-4 py-4 md:py-14">
+            <h2 className="text-xl md:text-2xl font-semibold">
               Additional technologies and skills
             </h2>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-28 mt-12 w-[80%]">
+            <div className=" sm:flex-row gap-4 md:gap-16 mt-7 md:mt-12 w-[80%] grid grid-cols-2 md:grid rows-1">
               <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="fmd:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   DSA
                 </p>
               </div>
               <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   AWS
                 </p>
               </div>
               <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   Figma
                 </p>
               </div>
               <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   git
                 </p>
               </div>
               <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   Postman
                 </p>
               </div>
               <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   Ajax
                 </p>
               </div>
               <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   jwt
                 </p>
               </div>
@@ -360,19 +360,19 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="py-8" id="aboutme">
+        <section className="py-2 md:py-3" id="aboutme">
           <div className="container m-auto px-4">
-            <h2 className="text-2xl font-semibold">About me</h2>
-            <div className="mt-12  relative before:absolute before:top-0 before:left-20 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
+            <h2 className="text-xl md:text-2xl font-semibold">About me</h2>
+            <div className="mt-6 md:mt-12  relative before:absolute before:top-0 before:left-20 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
               <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[73px]">
-                <h3 className="absolute left-0 text-lg font-semibold ">2019-22</h3>
-                <p>
+                <h3 className="absolute left-0 text-md md:text-lg font-mono md:font-semibold">2019-22</h3>
+                <p className="text-sm md:text-lg">
                   Graduated Bachelor degree (Co-opertative arsts and science College) specified with computer application
                 </p>
               </div>
               <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[73px]">
-                <h3 className="absolute left-0 text-lg font-semibold">2023-24</h3>
-                <p>
+                <h3 className="absolute left-0 text-md md:text-lg font-mono md:font-semibold">2023-24</h3>
+                <p className="text-sm md:text-lg">
                   I became more interested in problem-solving and technology, leading me to delve into both front-end and back-end development using the MERN stack.
                 </p>
               </div>
@@ -381,41 +381,41 @@ function App() {
         </section>
 
         {/* contact card start */}
-        <section className="py-8" id="contact">
-          <h1 className="text-2xl font-semibold ">
+        <section className="container m-auto px-4 md:py-8" id="contact">
+          <h1 className="text-xl md:text-2xl font-semibold ">
             Get in touch
           </h1>
-          <div className="bg-gray-500 mt-5 rounded-3xl p-6">
+          <div className="bg-gray-500 mt-5 rounded-3xl p-4 md:p-6">
             <div>
-              <p className="pt-5 pl-2 font-mono">
+              <p className="pt-3 md:pt-5 pl-2 font-mono text-sm md:text-lg">
                 I'm currently avaliable to take on new projects. So feel free to sent me a message about anything that you want to run past me. You can contact anytime at 24/7
               </p>
               <div>
                 <ul className="flex flex-col gap-5 pl-4 pt-5">
                   <div className="flex">
-                    <li className="bg-white w-12 h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl">
+                    <li className="bg-white w-8 md:w-12 h-8 md:h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl">
                       <div className="flex">
-                        <img src={location} className="w-8 h-8" alt="" />
+                        <img src={location} className="w-5 md:w-8 h-8" alt="" />
                       </div>
                     </li>
-                    <p className="pl-4 text-black text-md font-semibold">Kannur,India 670304</p>
+                    <p className="pl-4 text-black text-sm md:text-lg font-semibold">Kannur,India 670304</p>
                   </div>
                   <div className="flex">
-                    <li className="bg-white w-12 h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl">
+                    <li className="bg-white w-8 md:w-12 h-8 md:h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl">
                       <div className="flex">
-                        <img src={email} className="w-8 h-8" alt="" />
+                        <img src={email} className="w-5 md:w-8 h-8" alt="" />
                       </div>
                     </li>
-                    <p className="pl-4 text-black text-md font-semibold">irfan188iqbal@gmail.com</p>
+                    <p className="pl-4 text-black text-sm md:text-lg font-semibold">irfan188iqbal@gmail.com</p>
                   </div>
                   <div className="flex">
-                    <li className="bg-white w-12 h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl animate-bounce">
+                    <li className="bg-white w-8 md:w-12 h-8 md:h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl animate-bounce">
                       <div className="flex">
-                        <img src={call} className="w-8 h-8 " alt="" />
+                        <img src={call} className="w-5 md:w-8 h-8 " alt="" />
 
                       </div>
                     </li>
-                    <p className="pl-4 text-black  text-md font-semibold">+91 8139024188</p>
+                    <p className="pl-4 text-black  text-sm md:text-lg font-semibold">+91 8139024188</p>
                   </div>
                 </ul>
               </div>
@@ -428,11 +428,11 @@ function App() {
       </main>
       <footer>
         <div className="container m-auto flex justify-between px-4 py-6">
-          <div>
-            <p className="text-gray-300 text-sm">Copyright @ 2024</p>
-          </div>
+
           <div>
             <ul className="flex gap-6">
+          <h3 className="text-gray-500 font-serif text-sm">
+          Feel free to follow me</h3>
               <li>
                 <a href="https://leetcode.com/Irfan374/">
                   <img src={leetcode} className="w-7  tranform hover:scale-125  " />
