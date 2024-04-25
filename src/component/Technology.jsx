@@ -23,35 +23,35 @@ const Technology = () => {
 
   <div className="pointer-events-none relative flex gap-5 overflow-hidden">
     <div className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-5">
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={tailwind} alt="" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md"src={javascritp} alt="" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={nodejs} alt="" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={reactnative} alt="" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={react} alt="" />
+      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={tailwind} alt="1" />
+      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md"src={javascritp} alt="2" />
+      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={nodejs} alt="3" />
+      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-lg object-cover shadow-md" src={reactnative} alt="4" />
+      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={react} alt="5" />
     </div>
     <div aria-hidden="true" className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-10">
-      <img className="aspect-square max-w-[clamp(5rem,15vmin,15rem)] rounded-2xl object-cover shadow-md"src={git} alt="" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={Mongodb} alt="" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={redux} alt="" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={github}alt="" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={aws} alt="" />
+      <img className="aspect-square max-w-[clamp(5rem,15vmin,15rem)] rounded-2xl object-cover shadow-md"src={git} alt="6" />
+      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={Mongodb} alt="7" />
+      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={redux} alt="8" />
+      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={github}alt="9" />
+      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={aws} alt="10" />
     </div>
   </div>
 
   <div className="pointer-events-none relative mt-10 flex gap-10 overflow-hidden">
     <div className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-5 [animation-direction:reverse]">
-    <img className="aspect-square    max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md"src={postman} alt="" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={html} alt="" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={css} alt="" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={Mongodb}alt="" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={Bootstrap} alt="" />
+    <img className="aspect-square    max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md"src={postman} alt="11" />
+      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={html} alt="22" />
+      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={css} alt="33" />
+      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={Mongodb}alt="44" />
+      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={Bootstrap} alt="55" />
     </div>
     <div aria-hidden="true" className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-5 [animation-direction:reverse]">
-    <img className="aspect-square    max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md"src={vercel} alt="" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={github} alt="" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={postman} alt="" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={redux}alt="" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={tailwind} alt="" />
+    <img className="aspect-square    max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md"src={vercel} alt="66" />
+      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={github} alt="77" />
+      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={postman} alt="88" />
+      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={redux}alt="99" />
+      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={tailwind} alt="1010" />
     </div>
   </div>
 </div>
