@@ -15,6 +15,7 @@ import Muhammed_Irfan_Resume from './assets/Resume.pdf'
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
 import ProjectCard from "./component/ProjectCard";
+import Technology from "./component/Technology";
 
 function App() {
   const [scrolling, setScrolling] = useState(false);
@@ -37,7 +38,7 @@ function App() {
   return (
     <div className="max-w-4xl m-auto relative">
       <header className={`${scrolling ? 'border-b border-gray-900' : ''}  fixed left-0 right-0 top-0 z-20`} id="home">
-        <div className="container m-auto px-4 py-8 max-w-4xl bg-black">
+        <div className="container py-8 w-full m-auto bg-black">
           <div className="flex flex-col gap-4 sm:flex-row justify-end">
 
             <div>
@@ -81,7 +82,7 @@ function App() {
               </div>
 
               <p className="mt-4 text-gray-400 text-center md:text-justify">
-                As a passionate self-taught Full Stack Developer specializing in MERN technology, I transform ideas into user-friendly applications. I'm eager to join dynamic teams, contribute my skills, drive innovation, and create something amazing together. Let's connect!
+                As a passionate self-taught Full-Stack Developer specializing in MERN technology, I transform ideas into user-friendly applications. I'm eager to join dynamic teams, contribute my skills, drive innovation, and create something amazing together. Let's connect!
               </p>
               <a href={
                 Muhammed_Irfan_Resume
@@ -104,7 +105,7 @@ function App() {
             </div>
           </div>
         </section>
-        <ProjectCard />
+      <Technology/>
         {/* Projects section */}
 
         <section id="projects">
@@ -271,7 +272,7 @@ function App() {
               </div>
               <div className="mt-6 md:mt-8">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">CSS, Sass & Bootstrap</h2>
+                  <h2 className="font-semibold">CSS, Bootstrap</h2>
                   <p className="text-sm text-gray-500">Advanced</p>
                 </div>
                 <span className="w-[75%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
@@ -309,6 +310,13 @@ function App() {
                   <p className="text-sm text-gray-500">Advanced</p>
                 </div>
                 <span className="w-[90%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
+              </div>
+              <div className="mt-6 md:mt-8">
+                <div className="flex justify-between items-center">
+                  <h2 className="font-semibold">React Native</h2>
+                  <p className="text-sm text-gray-500">Advanced</p>
+                </div>
+                <span className="w-[80%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
               </div>
             </div>
           </div>
@@ -385,7 +393,7 @@ function App() {
           <h1 className="text-xl md:text-2xl font-semibold ">
             Get in touch
           </h1>
-          <div className="bg-gray-500 mt-5 rounded-3xl p-4 md:p-6">
+          <div className=" border mt-5 rounded-3xl p-4 md:p-6">
             <div>
               <p className="pt-3 md:pt-5 pl-2 font-mono text-sm md:text-lg">
                 I'm currently avaliable to take on new projects. So feel free to sent me a message about anything that you want to run past me. You can contact anytime at 24/7
@@ -398,7 +406,7 @@ function App() {
                         <img src={location} className="w-5 md:w-8 h-8" alt="" />
                       </div>
                     </li>
-                    <p className="pl-4 text-black text-sm md:text-lg font-semibold">Kannur,India 670304</p>
+                    <p className="pl-4 text-gray-400 text-sm md:text-lg font-semibold">Kannur,India 670304</p>
                   </div>
                   <div className="flex">
                     <li className="bg-white w-8 md:w-12 h-8 md:h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl">
@@ -406,7 +414,7 @@ function App() {
                         <img src={email} className="w-5 md:w-8 h-8" alt="" />
                       </div>
                     </li>
-                    <p className="pl-4 text-black text-sm md:text-lg font-semibold">irfan188iqbal@gmail.com</p>
+                    <p className="pl-4 text-gray-400 text-sm md:text-lg font-semibold">irfan188iqbal@gmail.com</p>
                   </div>
                   <div className="flex">
                     <li className="bg-white w-8 md:w-12 h-8 md:h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl animate-bounce">
@@ -415,7 +423,7 @@ function App() {
 
                       </div>
                     </li>
-                    <p className="pl-4 text-black  text-sm md:text-lg font-semibold">+91 8139024188</p>
+                    <p className="pl-4 text-gray-400  text-sm md:text-lg font-semibold">+91 8139024188</p>
                   </div>
                 </ul>
               </div>
