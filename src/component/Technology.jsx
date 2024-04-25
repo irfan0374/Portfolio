@@ -23,14 +23,14 @@ const Technology = () => {
 
   <div className="pointer-events-none relative flex gap-5 overflow-hidden">
     <div className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-5">
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={git} alt="" />
+      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={tailwind} alt="" />
       <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md"src={javascritp} alt="" />
       <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={nodejs} alt="" />
       <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={reactnative} alt="" />
       <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={react} alt="" />
     </div>
     <div aria-hidden="true" className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-10">
-      <img className="aspect-square max-w-[clamp(5rem,14vmin,13rem)] rounded-2xl object-cover shadow-md"src={tailwind} alt="" />
+      <img className="aspect-square max-w-[clamp(5rem,15vmin,15rem)] rounded-2xl object-cover shadow-md"src={git} alt="" />
       <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={Mongodb} alt="" />
       <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={redux} alt="" />
       <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={github}alt="" />

@@ -75,8 +75,9 @@ function App() {
             <div>
               <h2 className="font-bold text-3xl md:text-4xl ">Hello,I am Muhammed Irfan</h2>
               <div>
-                <h2 className="font-bold text-xl md:text-4xl mt-1 text-blue-600 gradiant-text">Full Stack Developer</h2>
-                <div>
+    <h2 class="font-bold text-xl md:text-4xl mt-1 text-blue-600 gradiant-text whitespace-nowrap overflow-hidden">Full Stack Developer</h2>
+    <div>
+
                   <h2 className=" font-sans text-md mt-1  text-gray-400" >With a focus on <span className="text-sky-500">React</span></h2>
                 </div>
               </div>
