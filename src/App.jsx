@@ -39,7 +39,7 @@ function App() {
     <div className="max-w-4xl m-auto relative">
       <header className={`${scrolling ? 'border-b border-gray-900' : ''}  fixed left-0 right-0 top-0 z-20`} id="home">
         <div className="container py-8 w-full m-auto bg-black">
-          <div className="flex flex-col gap-4 sm:flex-row justify-end">
+          <div className="flex flex-col gap-4 sm:flex-row justify-end px-3 ">
 
             <div>
               <ul className="flex gap-6 md:gap-12">
