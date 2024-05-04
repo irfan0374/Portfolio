@@ -11,7 +11,7 @@ import github from "./assets/github1.png";
 import LinkedIn from "./assets/linkedin.svg";
 import Profile from "./assets/profile2.png";
 import leetcode from "./assets/Leetcode1.png";
-import Muhammed_Irfan_Resume from './assets/Resume.pdf'
+import Muhammed_Irfan_Resume from './assets/Muhammed_Irfan_Resume.pdf'
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
 import ProjectCard from "./component/ProjectCard";
@@ -124,7 +124,7 @@ function App() {
 
                 </p>
                 <div className="flex mt-5 md:mt-12 gap-6 ">
-                  <button className="flex-1 text-sm py-2 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700" onClick={() => window.location.href = "https://zuus.onrender.com"}>
+                  <button className="flex-1 text-sm py-2 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700" onClick={() => window.location.href = "https://sevensky.vercel.app/"}>
                     Live preview
                   </button>
                   <section className="flex justify-center items-center">

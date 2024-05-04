@@ -50,8 +50,8 @@ const Technology = () => {
     <img className="aspect-square    max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md"src={vercel} alt="66" />
       <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={github} alt="77" />
       <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={postman} alt="88" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={redux}alt="99" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={tailwind} alt="1" />
+      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={redux}alt="9" />
+      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={tailwind} alt="" />
     </div>
   </div>
 </div>
