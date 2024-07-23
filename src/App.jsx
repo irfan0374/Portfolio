@@ -2,6 +2,8 @@ import "./App.css";
 import Project1 from "./assets/project1.png";
 import Project2 from "./assets/project2.png";
 import Project3 from "./assets/project3.jpg";
+import Project4 from "./assets/oregano2.jpg";
+import Project4i from "./assets/oregano1.jpg";
 import processing from "./assets/processing.jpeg";
 
 import call from './assets/call.svg'
@@ -157,7 +159,7 @@ function App() {
                 </div>
               </div>
               <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project3} className="w-full h-auto transfrom hover:scale-125 duration-150 rounded" />
+                <img src={Project3} className=" transfrom hover:scale-125 duration-150 w-full h-auto rounded" />
                 <h3 className="text-xl md:text-2xl font-semibold mt-8">
                   Zuus
                 </h3>
@@ -204,19 +206,16 @@ function App() {
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={Project2} className="transfrom hover:scale-125 duration-150 w-full h-auto rounded" />
                 <h3 className="text-xl md:text-2xl font-semibold mt-8">
-                  Weather App
+                  Weather Dashboard
                 </h3>
                 <p className="text-gray-400 text-sm mt-2">
-
-                  This project is a React weather application that utilizes the OpenWeatherMap API to fetch weather data for a given location. It also incorporates Mapbox to retrieve the user's exact location for accurate weather information.
+                Developed a weather dashboard with a robust backend using Node.js, Express.js, PostgreSQL, and Prisma, featuring JWT user authentication and Open WeatherMap integration; the frontend, built with React and Vite, allows users to register, log in, search weather with Google Map suggestions, view detailed conditions, and manage favorite cities, all integrated with the Open WeatherMap API for current, forecast, and historical weather data.
                 </p>
                 <div className="flex mt-5 md:mt-12 gap-6 ">
-                  <button className="flex-1 text-sm py-2 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700" onClick={() => window.location.href = "https://zuus.onrender.com"}>
-                    Live preview
-                  </button>
-                  <section className="flex justify-center items-center">
+                  
+                  <section>
                     <a
-                      href="https://github.com/irfan0374/weatherApp"
+                      href="https://github.com/irfan0374/viScan_weatherApp_frontend.git"
                       className="group flex justify-center p-2 rounded-md drop-shadow-xl bg-white text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:bg-white"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -246,13 +245,17 @@ function App() {
                 </div>
               </div>
               <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={processing} className="w-full h-auto" />
+                <div className="flex justify-around">
+
+                <img src={Project4i} className="transfrom hover:scale-125 duration-150 w-ful h-56 rounded" />
+                <img src={Project4} className="transfrom hover:scale-125 duration-150 w-ful h-56 rounded" />
+                </div>
                 <h3 className="text-xl md:text-2xl font-semibold mt-8">
-                  project 4
+                 Digital Menu <span className="font-thin text-lg">(Cafe Oregano)</span>
                 </h3>
                 <p className="text-gray-400 text-sm mt-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, enim ducimus sit cum nulla dolorum voluptatem inventore in quidem nobis cupiditate
-                </p>
+
+                Developed a dynamic and interactive digital menu card for Cafe Oregano as part of <span className="font-semibold text-white">freelance work</span>, incorporating attractive designs and layouts to enhance the customer dining experience, using React.js, Tailwind CSS, DaisyUI, Material Tailwind, and Context API.                </p>
 
               </div>
 
@@ -328,9 +331,9 @@ function App() {
             <h2 className="text-xl md:text-2xl font-semibold">
               Additional technologies and skills
             </h2>
-            <div className=" sm:flex-row gap-4 md:gap-16 mt-7 md:mt-12 w-[80%] grid grid-cols-2 md:grid rows-1">
+            <div className=" sm:flex-row gap-4 md:gap-16 mt-7 md:mt-12 w-[80%] grid grid-cols-3 md:grid rows-1">
               <div>
-                <p className="fmd:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   DSA
                 </p>
               </div>
@@ -346,7 +349,7 @@ function App() {
               </div>
               <div>
                 <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  git
+                  Git
                 </p>
               </div>
               <div>
@@ -361,7 +364,17 @@ function App() {
               </div>
               <div>
                 <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  jwt
+                  Jwt
+                </p>
+              </div>
+              <div>
+                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                  Prisma
+                </p>
+              </div>
+              <div>
+                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                  Typescript
                 </p>
               </div>
             </div>
