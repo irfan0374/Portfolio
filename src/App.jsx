@@ -4,7 +4,8 @@ import Project2 from "./assets/project2.png";
 import Project3 from "./assets/project3.jpg";
 import Project4 from "./assets/oregano2.jpg";
 import Project4i from "./assets/oregano1.jpg";
-import processing from "./assets/processing.jpeg";
+import Mainpic from "./assets/Mainpic.png";
+
 
 import call from './assets/call.svg'
 import email from './assets/email.svg'
@@ -29,6 +30,7 @@ function App() {
       setScrolling(false);
     }
   }
+  
 
   useEffect(() => {
     window.addEventListener("scroll", onPageScroll)
@@ -77,9 +79,8 @@ function App() {
             <div>
               <h2 className="font-bold text-3xl md:text-4xl ">Hello,I am Muhammed Irfan</h2>
               <div>
-    <h2 class="font-bold text-xl md:text-4xl mt-1 text-blue-600 gradiant-text whitespace-nowrap overflow-hidden">Full Stack Developer</h2>
-    <div>
-
+                <h2 className="font-bold text-xl md:text-4xl mt-1 text-blue-600 gradiant-text whitespace-nowrap overflow-hidden">Full Stack Developer</h2>
+                <div>
                   <h2 className=" font-sans text-md mt-1  text-gray-400" >With a focus on <span className="text-sky-500">React</span></h2>
                 </div>
               </div>
@@ -104,11 +105,11 @@ function App() {
               </a>
             </div>
             <div className="relative">
-              <img src={Profile} className="tansform hover:scale-95 duration-150 relative z-10 w-[200px] m-auto h-[300px] md:h-[430px] md:w-[880px] " />
+              <img src={Mainpic} className="tansform hover:scale-95 duration-150 relative z-10 w-[200px] m-auto h-[300px] md:h-[370px] md:w-[880px]" />
             </div>
           </div>
         </section>
-      <Technology/>
+        <Technology />
         {/* Projects section */}
 
         <section id="projects">
@@ -209,10 +210,10 @@ function App() {
                   Weather Dashboard
                 </h3>
                 <p className="text-gray-400 text-sm mt-2">
-                Developed a weather dashboard with a robust backend using Node.js, Express.js, PostgreSQL, and Prisma, featuring JWT user authentication and Open WeatherMap integration; the frontend, built with React and Vite, allows users to register, log in, search weather with Google Map suggestions, view detailed conditions, and manage favorite cities, all integrated with the Open WeatherMap API for current, forecast, and historical weather data.
+                  Developed a weather dashboard with a robust backend using Node.js, Express.js, PostgreSQL, and Prisma, featuring JWT user authentication and Open WeatherMap integration; the frontend, built with React and Vite, allows users to register, log in, search weather with Google Map suggestions, view detailed conditions, and manage favorite cities, all integrated with the Open WeatherMap API for current, forecast, and historical weather data.
                 </p>
                 <div className="flex mt-5 md:mt-12 gap-6 ">
-                  
+
                   <section>
                     <a
                       href="https://github.com/irfan0374/viScan_weatherApp_frontend.git"
@@ -247,15 +248,15 @@ function App() {
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <div className="flex justify-around">
 
-                <img src={Project4i} className="transfrom hover:scale-125 duration-150 w-ful h-56 rounded" />
-                <img src={Project4} className="transfrom hover:scale-125 duration-150 w-ful h-56 rounded" />
+                  <img src={Project4i} className="transfrom hover:scale-125 duration-150 w-ful h-56 rounded" />
+                  <img src={Project4} className="transfrom hover:scale-125 duration-150 w-ful h-56 rounded" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-semibold mt-8">
-                 Digital Menu <span className="font-thin text-lg">(Cafe Oregano)</span>
+                  Digital Menu <span className="font-thin text-lg">(Cafe Oregano)</span>
                 </h3>
                 <p className="text-gray-400 text-sm mt-2">
 
-                Developed a dynamic and interactive digital menu card for Cafe Oregano as part of <span className="font-semibold text-white">freelance work</span>, incorporating attractive designs and layouts to enhance the customer dining experience, using React.js, Tailwind CSS, DaisyUI, Material Tailwind, and Context API.                </p>
+                  Developed a dynamic and interactive digital menu card for Cafe Oregano as part of <span className="font-semibold text-white">freelance work</span>, incorporating attractive designs and layouts to enhance the customer dining experience, using React.js, Tailwind CSS, DaisyUI, Material Tailwind, and Context API.                </p>
 
               </div>
 
@@ -453,8 +454,8 @@ function App() {
 
           <div>
             <ul className="flex gap-6">
-          <h3 className="text-gray-500 font-serif text-sm">
-          Feel free to follow me</h3>
+              <h3 className="text-gray-500 font-serif text-sm">
+                Feel free to follow me</h3>
               <li>
                 <a href="https://leetcode.com/Irfan374/">
                   <img src={leetcode} className="w-7  tranform hover:scale-125  " />
