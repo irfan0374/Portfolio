@@ -14,7 +14,7 @@ import github from "./assets/github1.png";
 import LinkedIn from "./assets/linkedin.svg";
 import Profile from "./assets/profile2.png";
 import leetcode from "./assets/Leetcode1.png";
-import Muhammed_irfan_Resume from './assets/Muhammed_irfan_Resume.pdf'
+import Muhammed_irfan_Resume from './assets/Muhammed_irfan_Resume.pdf';
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
 import ProjectCard from "./component/ProjectCard";
