@@ -14,7 +14,7 @@ import github from "./assets/github1.png";
 import LinkedIn from "./assets/linkedin.svg";
 import Profile from "./assets/profile2.png";
 import leetcode from "./assets/Leetcode1.png";
-import Muhammed_Irfan_Resume from './assets/Muhammed_Irfan_Resume.pdf'
+import Muhammed_Irfan_Resume from './assets/Muhammed_irfan_Resume.pdf'
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
 import ProjectCard from "./component/ProjectCard";
@@ -123,7 +123,7 @@ function App() {
                 </h3>
                 <p className="text-gray-400 text-sm mt-2">
 
-                  a MERN stack-based real estate platform featuring real-time chat (Socket.io), secure payments (Stripe), and seamless navigation (Google Maps). Leveraged Axios interceptors for efficient data flow and utilized Tailwind CSS for a responsive UI. Result: An innovative and user-friendly real estate experience.
+                  A MERN stack-based real estate platform featuring real-time chat (Socket.io), secure payments (Stripe), and seamless navigation (Google Maps). Leveraged Axios interceptors for efficient data flow and utilized Tailwind CSS for a responsive UI. Result: An innovative and user-friendly real estate experience.
 
                 </p>
                 <div className="flex mt-5 md:mt-12 gap-6 ">
