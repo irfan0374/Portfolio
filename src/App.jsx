@@ -14,7 +14,7 @@ import github from "./assets/github1.png";
 import LinkedIn from "./assets/linkedin.svg";
 import Profile from "./assets/profile2.png";
 import leetcode from "./assets/Leetcode1.png";
-import Muhammed_Irfan_Resume from './assets/Muhammed_irfan_Resume.pdf'
+import Muhammed_irfan_Resume from './assets/Muhammed_irfan_Resume.pdf'
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
 import ProjectCard from "./component/ProjectCard";
@@ -89,7 +89,7 @@ function App() {
                 As a passionate self-taught Full-Stack Developer specializing in MERN technology, I transform ideas into user-friendly applications. I'm eager to join dynamic teams, contribute my skills, drive innovation, and create something amazing together. Let's connect!
               </p>
               <a href={
-                Muhammed_Irfan_Resume
+               Muhammed_irfan_Resume
               } download >
 
                 <div className="button ">
