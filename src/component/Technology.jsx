@@ -16,46 +16,57 @@ import css from '/css.svg'
 import vercel from '/vercel.svg'
 
 const Technology = () => {
+  // Common style for small, professional icons
+  const iconStyle = "h-8 md:h-10 w-auto object-contain grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300";
+
   return (
-   <div className="relative flex flex-col justify-center overflow-hidden bg-black ">
-  <img src="/img/beams.jpg" alt="" className="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="800" />
-  <div className="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+   <div className="relative flex flex-col justify-center overflow-hidden bg-black py-6 border-y border-white/5">
+    {/* Background Grid Accent */}
+    <div className="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10"></div>
 
-  <div className="pointer-events-none relative flex gap-5 overflow-hidden">
-    <div className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-5">
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={tailwind} alt="1" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md"src={javascritp} alt="2" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={nodejs} alt="3" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-lg object-cover shadow-md" src={reactnative} alt="4" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={react} alt="5" />
+    {/* First Row: Forward Motion */}
+    <div className="pointer-events-none relative flex gap-8 overflow-hidden">
+      <div className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-8">
+        <img className={iconStyle} src={tailwind} alt="Tailwind" />
+        <img className={iconStyle} src={javascritp} alt="JavaScript" />
+        <img className={iconStyle} src={nodejs} alt="Node.js" />
+        <img className={iconStyle} src={reactnative} alt="React Native" />
+        <img className={iconStyle} src={react} alt="React" />
+        <img className={iconStyle} src={aws} alt="AWS" />
+      </div>
+      <div aria-hidden="true" className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-8">
+        <img className={iconStyle} src={tailwind} alt="Tailwind" />
+        <img className={iconStyle} src={javascritp} alt="JavaScript" />
+        <img className={iconStyle} src={nodejs} alt="Node.js" />
+        <img className={iconStyle} src={reactnative} alt="React Native" />
+        <img className={iconStyle} src={react} alt="React" />
+        <img className={iconStyle} src={aws} alt="AWS" />
+      </div>
     </div>
-    <div aria-hidden="true" className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-10">
-      <img className="aspect-square max-w-[clamp(5rem,15vmin,15rem)] rounded-2xl object-cover shadow-md"src={git} alt="6" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={Mongodb} alt="7" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={redux} alt="8" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={github}alt="9" />
-      <img className="aspect-square max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={aws} alt="10" />
+
+    {/* Second Row: Reverse Motion */}
+    <div className="pointer-events-none relative mt-8 flex gap-8 overflow-hidden">
+      <div className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-8 [animation-direction:reverse]">
+        <img className={iconStyle} src={postman} alt="Postman" />
+        <img className={iconStyle} src={html} alt="HTML" />
+        <img className={iconStyle} src={css} alt="CSS" />
+        <img className={iconStyle} src={Mongodb} alt="MongoDB" />
+        <img className={iconStyle} src={Bootstrap} alt="Bootstrap" />
+        <img className={iconStyle} src={git} alt="Git" />
+        <img className={iconStyle} src={vercel} alt="Vercel" />
+      </div>
+      <div aria-hidden="true" className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-8 [animation-direction:reverse]">
+        <img className={iconStyle} src={postman} alt="Postman" />
+        <img className={iconStyle} src={html} alt="HTML" />
+        <img className={iconStyle} src={css} alt="CSS" />
+        <img className={iconStyle} src={Mongodb} alt="MongoDB" />
+        <img className={iconStyle} src={Bootstrap} alt="Bootstrap" />
+        <img className={iconStyle} src={git} alt="Git" />
+        <img className={iconStyle} src={vercel} alt="Vercel" />
+      </div>
     </div>
   </div>
-
-  <div className="pointer-events-none relative mt-10 flex gap-10 overflow-hidden">
-    <div className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-5 [animation-direction:reverse]">
-    <img className="aspect-square    max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md"src={postman} alt="11" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={html} alt="22" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={css} alt="33" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={Mongodb}alt="44" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={Bootstrap} alt="55" />
-    </div>
-    <div aria-hidden="true" className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-5 [animation-direction:reverse]">
-    <img className="aspect-square    max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md"src={vercel} alt="66" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={github} alt="77" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={postman} alt="88" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={redux}alt="9" />
-      <img className="aspect-square  max-w-[clamp(4rem,12vmin,8rem)] rounded-2xl object-cover shadow-md" src={tailwind} alt="" />
-    </div>
-  </div>
-</div>
   )
 }
 
-export default Technology
+export default Technology;

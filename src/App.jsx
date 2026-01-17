@@ -1,488 +1,493 @@
-import "./App.css";
-import Project1 from "./assets/project1.png";
-import Project2 from "./assets/project2.png";
-import Project3 from "./assets/project3.jpg";
-import Project4 from "./assets/oregano2.jpg";
-import Project4i from "./assets/oregano1.jpg";
-import Mainpic from "./assets/Mainpic.png";
+import React, { useState, useEffect } from 'react';
+import { 
+  Github, Linkedin, Mail, Phone, MapPin, ExternalLink, 
+  Code2, Database, Cloud, Layout, Terminal, Award, 
+  Download, ShieldCheck, Zap, Layers, Users, MessageCircle,
+  Briefcase, Clock, CheckCircle2
+} from 'lucide-react';
+import profile from './assets/profile3.jpg'
+import Technology from './component/Technology.jsx';
+import cv from './assets/muhammed_irfan_full_stack_developer.pdf';
 
-
-import call from './assets/call.svg'
-import email from './assets/email.svg'
-import location from './assets/location.svg'
-import github from "./assets/github1.png";
-import LinkedIn from "./assets/linkedin.svg";
-import leetcode from "./assets/Leetcode1.png";
-import Muhammed_irfan_Resume from '/Muhammed_irfan_Resume.pdf';
-import ArrowDown from "./assets/arrow-down.svg";
-import { useEffect, useState } from "react";
-import Technology from "./component/Technology";
-
-function App() {
-  const [scrolling, setScrolling] = useState(false);
-
-  const onPageScroll = () => {
-    if (window.pageYOffset > 200) {
-      setScrolling(true)
-    } else {
-      setScrolling(false);
-    }
-  }
-  
+const Portfolio = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", onPageScroll)
-    return () => {
-      window.removeEventListener("scroll", onPageScroll)
-    }
-  }, [])
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className="max-w-4xl m-auto relative">
-      <header className={`${scrolling ? 'border-b border-gray-900' : ''}  fixed left-0 right-0 top-0 z-20`} id="home">
-        <div className="container py-8 w-full m-auto bg-black">
-          <div className="flex flex-col gap-4 sm:flex-row justify-end px-3 ">
+    <div className="bg-[#050505] text-gray-200 min-h-screen font-sans selection:bg-blue-500/30">
+      {/* Navigation */}
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800 py-4' : 'bg-transparent py-6'}`}>
+        <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
+          <span className="text-xl font-black tracking-tighter bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent uppercase">Irfan.Dev</span>
+          <div className="hidden md:flex gap-8 text-xs uppercase tracking-widest font-bold">
+            <a href="#expertise" className="hover:text-blue-400 transition">Expertise</a>
+            <a href="#experience" className="hover:text-blue-400 transition">Experience</a>
+            <a href="#services" className="hover:text-blue-500 transition">Services</a>
+            <a href="#contact" className="hover:text-blue-400 transition">Contact</a>
+          </div>
+        </div>
+      </nav>
 
-            <div>
-              <ul className="flex gap-6 md:gap-12">
-                <li>
-                  <a href="#projects" className=" text-sm md:text-lg text-gray-400 hover:text-white cursor-pointer font-semibold">
-                    Projects
-                  </a>
+      {/* Hero Section */}
+{/* Hero Section */}
+     {/* Hero Section */}
+      <section className="relative pt-40 pb-8 px-6 overflow-hidden min-h-screen flex items-center">
+        {/* Animated Gradient Mesh Background */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full filter blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-600/20 rounded-full filter blur-[120px] animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/10 rounded-full filter blur-[150px] animate-pulse" style={{animationDelay: '2s'}}></div>
+        </div>
+
+        {/* Floating Grid Lines */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px] -z-10"></div>
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center w-full">
+          <div className="space-y-8 animate-fadeIn">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              </span>
+              Based in Dubai, UAE | Available Immediately
+            </div>
+            
+            <h1 className="text-6xl md:text-8xl font-black text-white leading-tight tracking-tighter">
+              MUHAMMED <br/>
+              <span className="relative inline-block">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 animate-gradient">
+                  IRFAN
+                </span>
+                <span className="absolute -inset-1 bg-gradient-to-r from-blue-600/50 to-cyan-600/50 blur-xl -z-10 animate-pulse"></span>
+              </span>
+            </h1>
+            
+            <div className="relative">
+              <p className="text-xl md:text-2xl text-gray-300 font-light">
+                Full-Stack Developer & <span className="text-white font-bold border-b-2 border-blue-600">Front-End Team Lead</span>
+              </p>
+            </div>
+            
+            <p className="text-gray-400 leading-relaxed max-w-xl text-lg">
+              Architecting enterprise-grade ERP, E-commerce, and Fintech solutions. Specializing in Python (Django), React.js, and Angular for high-traffic platforms.
+            </p>
+            
+            {/* Stats Bar - UAE Professional Standard */}
+            <div className="flex gap-8 py-6 border-y border-gray-800">
+              <div>
+                <div className="text-3xl font-bold text-white">2+</div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider">Years Exp</div>
+              </div>
+             
+              <div>
+                <div className="text-3xl font-bold text-white">10+</div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider">Projects</div>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <a href="mailto:irfan188iqbal@gmail.com" className="group relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-10 py-4 rounded-full font-bold transition overflow-hidden">
+                <span className="relative z-10">Contact Me</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </a>
+              <a href={cv} download className="border-2 border-gray-700 hover:border-blue-500 px-10 py-4 rounded-full font-bold transition flex items-center gap-2 hover:bg-blue-500/10">
+                Download CV <Download size={18} />
+              </a>
+            </div>
+          </div>
+
+          {/* Enhanced Profile Image with Holographic Effect */}
+          <div className="relative group hidden md:flex justify-center items-center">
+            <div className="relative w-80 lg:w-96">
+              {/* Holographic Border Animation */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600 rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition-all duration-700 animate-spin-slow"></div>
+              
+              {/* Corner Accents */}
+              <div className="absolute -top-3 -left-3 w-16 h-16 border-t-4 border-l-4 border-blue-500 rounded-tl-3xl"></div>
+              <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b-4 border-r-4 border-cyan-500 rounded-br-3xl"></div>
+              
+              {/* Scan Line Effect */}
+              <div className="absolute inset-0 overflow-hidden rounded-[2rem] pointer-events-none z-10">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/10 to-transparent h-32 animate-scan"></div>
+              </div>
+              
+              {/* Main Image */}
+              <div className="relative rounded-[2rem] border-2 border-gray-800 overflow-hidden aspect-square bg-gradient-to-br from-gray-900 to-black">
+                <img src={profile} alt="Irfan" className="relative w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-110" />
+              </div>
+
+              {/* Floating Tech Badges */}
+              <div className="absolute -right-6 top-16 bg-black/80 backdrop-blur-md border border-blue-500/30 rounded-2xl px-3 py-1.5 animate-float">
+                <div className="text-xs text-blue-400 font-bold">React Expert</div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      {/* Deep Expertise Section */}
+      <section id="expertise" className="py-14 px-6 border-y border-gray-900 bg-[#080808]">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="space-y-4 group p-6 rounded-2xl hover:bg-white/5 transition">
+              <Layers className="text-blue-500" size={40} />
+              <h3 className="text-xl font-bold text-white">System Architecture</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">Designing scalable ERP modules (HRM, Accounts, Inventory) with robust RBAC and data integrity protocols.</p>
+            </div>
+            <div className="space-y-4 group p-6 rounded-2xl hover:bg-white/5 transition">
+              <Zap className="text-blue-500" size={40} />
+              <h3 className="text-xl font-bold text-white">Performance Engineering</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">Optimizing real-time streaming for 500+ users with &lt;400ms latency and 35% faster page loads.</p>
+            </div>
+            <div className="space-y-4 group p-6 rounded-2xl hover:bg-white/5 transition">
+              <ShieldCheck className="text-blue-500" size={40} />
+              <h3 className="text-xl font-bold text-white">Fintech & Security</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">Implementing automated billing, webhook listeners, and multi-factor authentication for secure payments.</p>
+            </div>
+          </div>
+        </div>
+      <Technology/>
+      </section>
+      
+
+      {/* Technical Expertise (Badge System) */}
+      <section id="skills" className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent inline-block mb-4">
+              Technical Expertise
+            </h2>
+            <p className="text-gray-400">Production-tested skills from 2+ years building scalable systems.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Backend Development */}
+            <div className="bg-[#111] border border-gray-800 rounded-3xl p-8 border-t-purple-500/50">
+              <div className="flex items-center gap-4 mb-8">
+                <Database className="text-purple-400" />
+                <h4 className="text-xl font-bold text-white uppercase tracking-widest">Backend</h4>
+              </div>
+              <div className="space-y-6">
+                {[
+                  { name: "Python", level: "Expert" },
+                  { name: "Django & DRF", level: "Expert" },
+                  { name: "Node.js", level: "Expert" },
+                  { name: "REST / GraphQL", level: "Advanced" },
+                  { name: "PostgreSQL", level: "Advanced" }
+                ].map((skill, i) => (
+                  <div key={i} className="flex justify-between items-center">
+                    <span className="text-gray-300 font-medium">{skill.name}</span>
+                    <span className={`text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter ${
+                      skill.level === 'Expert' ? 'bg-purple-500/20 text-purple-400' : 'bg-blue-500/20 text-blue-400'
+                    }`}>
+                      {skill.level}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Frontend Development */}
+            <div className="bg-[#111] border border-gray-800 rounded-3xl p-8 border-t-blue-500/50">
+              <div className="flex items-center gap-4 mb-8">
+                <Layout className="text-blue-400" />
+                <h4 className="text-xl font-bold text-white uppercase tracking-widest">Frontend</h4>
+              </div>
+              <div className="space-y-6">
+                {[
+                  { name: "React", level: "Expert" },
+                  { name: "JavaScript", level: "Advanced" },
+                  { name: "Tailwind CSS", level: "Advanced" },
+                  { name: "Redux", level: "Intermediate" },
+                  { name: "Responsive Design", level: "Advanced" }
+                ].map((skill, i) => (
+                  <div key={i} className="flex justify-between items-center">
+                    <span className="text-gray-300 font-medium">{skill.name}</span>
+                    <span className="text-[10px] font-bold bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full uppercase tracking-tighter">
+                      {skill.level}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Cloud & DevOps */}
+            <div className="bg-[#111] border border-gray-800 rounded-3xl p-8 border-t-cyan-500/50">
+              <div className="flex items-center gap-4 mb-8">
+                <Cloud className="text-cyan-400" />
+                <h4 className="text-xl font-bold text-white uppercase tracking-widest">Cloud</h4>
+              </div>
+              <div className="space-y-6">
+                {[
+                  { name: "AWS (EC2, S3)", level: "Intermediate" },
+                  { name: "Docker", level: "Intermediate" },
+                  { name: "Nginx", level: "Intermediate" },
+                  { name: "Vercel / Firebase", level: "Intermediate" },
+                  { name: "GitHub Actions", level: "Intermediate" }
+                ].map((skill, i) => (
+                  <div key={i} className="flex justify-between items-center">
+                    <span className="text-gray-300 font-medium">{skill.name}</span>
+                    <span className="text-[10px] font-bold bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full uppercase tracking-tighter">
+                      {skill.level}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Engagement Models (Project-Based Cards) */}
+      <section id="services" className="py-24 px-6 bg-[#080808]">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+          {/* Full-Stack Development Card */}
+          <div className="bg-[#111] border border-gray-800 rounded-[2.5rem] p-10 hover:border-blue-500/30 transition-all group">
+            <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
+              <Briefcase className="text-blue-500" size={36} />
+            </div>
+            <h3 className="text-3xl font-bold text-white mb-6">Full-Stack Development</h3>
+            <p className="text-gray-400 leading-relaxed mb-8">
+              End-to-end development for web applications, from database design to frontend implementation. 
+              Backend-focused, but capable across the entire stack.
+            </p>
+            <ul className="space-y-4 mb-10">
+              {[
+                "React/Angular frontend development",
+                "Database design and optimization",
+                "User authentication and authorization",
+                "Deployment and DevOps (AWS, Docker)",
+                "Responsive, modern UI implementation"
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                  <CheckCircle2 className="text-green-500 shrink-0" size={18} /> {item}
                 </li>
-                <li>
-                  <a href="#technologies" className="text-sm md:text-lg text-gray-400 hover:text-white cursor-pointer font-semibold">
-                    Technologies
-                  </a>
+              ))}
+            </ul>
+            
+          </div>
+
+          {/* Freelance & Contract Card */}
+          <div className="bg-[#111] border border-gray-800 rounded-[2.5rem] p-10 hover:border-purple-500/30 transition-all group">
+            <div className="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
+              <Clock className="text-purple-500" size={36} />
+            </div>
+            <h3 className="text-3xl font-bold text-white mb-6">Freelance & Contract</h3>
+            <p className="text-gray-400 leading-relaxed mb-8">
+              Available for project-based work, long-term contracts, or part-time engagements. 
+              Flexible with time zones and remote collaboration.
+            </p>
+            <ul className="space-y-4 mb-10">
+              {[
+                "Fixed-price projects or hourly rates",
+                "Long-term contract engagements",
+                "Part-time availability for ongoing work",
+                "Remote-first, async-friendly communication",
+                "Flexible with time zones (India, UAE)"
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                  <CheckCircle2 className="text-green-500 shrink-0" size={18} /> {item}
                 </li>
-                <li>
-                  <a href="#aboutme" className=" text-sm md:text-lg text-gray-400 hover:text-white cursor-pointer font-semibold">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="text-sm md:text-lg text-gray-400 hover:text-white cursor-pointer font-semibold">
-                    Contacts
-                  </a>
-                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Experience Section */}
+      <section id="experience" className="py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-16 flex items-center gap-4">
+            <Award className="text-blue-500" /> Career Milestones
+          </h2>
+          <div className="space-y-16">
+            <div className="relative pl-12 border-l-2 border-gray-800 group">
+              <div className="absolute w-5 h-5 bg-blue-600 rounded-full -left-[11px] top-0 group-hover:scale-125 transition shadow-[0_0_15px_rgba(37,99,235,0.5)]"></div>
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Front-End Team Lead</h3>
+                  <p className="text-blue-400 font-bold">ibadvisory (Remote,India)</p>
+                </div>
+                <span className="text-xs font-mono bg-white/5 px-3 py-1 rounded text-gray-500">Nov 2025 - Present</span>
+              </div>
+              <ul className="grid gap-3 text-gray-400">
+                <li>• Architected Virtual Yoga Studio for 500+ users using Agora SDK.</li>
+                <li>• Automated billing via Razorpay Subscription API and webhooks.</li>
+                <li>• Deployed Msg91 MFA achieving 99% delivery success rate.</li>
+              </ul>
+            </div>
+
+            <div className="relative pl-12 border-l-2 border-gray-800 group">
+              <div className="absolute w-5 h-5 bg-gray-800 rounded-full -left-[11px] top-0 group-hover:bg-blue-600 transition"></div>
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Full Stack Developer</h3>
+                  <p className="text-blue-400 font-bold">Finisso Technologies (India)</p>
+                </div>
+                <span className="text-xs font-mono bg-white/5 px-3 py-1 rounded text-gray-500">2024 - 2025</span>
+              </div>
+              <ul className="grid gap-3 text-gray-400">
+                <li>• Engineered ERP modules (HRM, Accounts, Inventory) using PostgreSQL.</li>
+                <li>• Improved financial reporting speed by 30% via dashboards.</li>
+                <li>• Collaborated with clients in UAE, Oman, and Bahrain on system design.</li>
               </ul>
             </div>
           </div>
         </div>
-      </header>
-      <main className="relative mt-28">
-        {/* Intro/Banner section */}
-        <section>
-          <div className="container  px-4 pt-2 md:pt-12 pb-3 md:pb-12 flex flex-col sm:flex-row gap-6 text-center sm:text-left">
-            <div>
-              <h2 className="font-bold text-3xl md:text-4xl ">Hello,I am Muhammed Irfan</h2>
-              <div>
-                <h2 className="font-bold text-xl md:text-4xl mt-1 text-blue-600 gradiant-text whitespace-nowrap overflow-hidden">Full Stack Developer</h2>
-                <div>
-                  <h2 className=" font-sans text-md mt-1  text-gray-400" >With a focus on <span className="text-sky-500">React</span></h2>
-                </div>
-              </div>
+      </section>
 
-              <p className="mt-4 text-gray-400 text-center md:text-justify">
-                As a passionate self-taught Full-Stack Developer specializing in MERN technology, I transform ideas into user-friendly applications. I'm eager to join dynamic teams, contribute my skills, drive innovation, and create something amazing together. Let's connect!
-              </p>
-              <a href={
-               Muhammed_irfan_Resume
-              } download >
+      {/* Featured Projects Section */}
+<section id="projects" className="py-24 px-6">
+  <div className="max-w-6xl mx-auto">
+    <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+      <div>
+        <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+        <p className="text-gray-400 max-w-lg">
+          A selection of enterprise systems and freelance solutions I've architected for international clients.
+        </p>
+      </div>
+      <div className="flex gap-2 text-xs font-bold uppercase tracking-widest text-blue-500 bg-blue-500/10 px-4 py-2 rounded-full border border-blue-500/20">
+        <Zap size={14} /> Performance Focused
+      </div>
+    </div>
 
-                <div className="button ">
-                  <div className="button-wrapper">
-                    <div className="text">Resume</div>
-                    <span className="icon animate-bounce ">
-                      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                        <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
+    <div className="grid md:grid-cols-3 gap-8">
+      {/* Cafe Oregano - Freelance Highlight */}
+      <div className="group relative bg-[#111] border border-gray-800 rounded-[2rem] overflow-hidden hover:border-blue-500/50 transition-all">
+        <div className="p-8">
+          <div className="flex justify-between items-start mb-6">
+            <div className="p-3 bg-blue-500/10 rounded-xl text-blue-500">
+              <Layout size={24} />
             </div>
-            <div className="relative">
-              <img src={Mainpic} className="tansform hover:scale-95 duration-150 relative z-10 w-[200px] m-auto h-[300px] md:h-[370px] md:w-[880px]" />
-            </div>
+            <span className="text-[10px] font-bold bg-white/5 px-2 py-1 rounded text-gray-500 uppercase tracking-tighter">
+              Freelance Project
+            </span>
           </div>
-        </section>
-        <Technology />
-        {/* Projects section */}
-
-        <section id="projects">
-          <div className="container m-auto px-4 py-2 md:py-12">
-            <h2 className="text-xl md:text-2xl font-semibold">Projects</h2>
-            <div className="flex flex-col sm:flex-row gap-10 mt-11">
-              <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project1} className=" transfrom hover:scale-125 duration-150 w-full h-auto rounded" />
-                <h3 className="text-xl md:text-2xl font-semibold mt-8">
-                  Sevensky
-                </h3>
-                <p className="text-gray-400 text-sm mt-2">
-
-                  A MERN stack-based real estate platform featuring real-time chat (Socket.io), secure payments (Stripe), and seamless navigation (Google Maps). Leveraged Axios interceptors for efficient data flow and utilized Tailwind CSS for a responsive UI. Result: An innovative and user-friendly real estate experience.
-
-                </p>
-                <div className="flex mt-5 md:mt-12 gap-6 ">
-                  <button className="flex-1 text-sm py-2 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700" onClick={() => window.location.href = "https://sevensky.vercel.app/"}>
-                    Live preview
-                  </button>
-                  <section className="flex justify-center items-center">
-                    <a
-                      href="https://github.com/irfan0374/SevenSky--ClientSide"
-                      className="group flex justify-center p-2 rounded-md drop-shadow-xl bg-white text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:bg-white"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 15 15"
-                        className="w-5 text-black"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          fill-rule="evenodd"
-                          fill="currentColor"
-                          d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z"
-                        ></path>
-                      </svg>
-                      <span
-                        className="absolute opacity-0 group-hover:opacity-100 group-hover:text-white group-hover:text-sm group-hover:-translate-y-10 duration-700"
-                      >
-                        GitHub
-                      </span>
-                    </a>
-                  </section>
-                </div>
-              </div>
-              <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project3} className=" transfrom hover:scale-125 duration-150 w-full h-auto rounded" />
-                <h3 className="text-xl md:text-2xl font-semibold mt-8">
-                  Zuus
-                </h3>
-                <p className="text-gray-400 text-sm mt-2">
-                  Zuus is an e-commerce platform specializing in the online sale of shoes& chappels
-
-                  In the client-side, implemented features include user authentication, productlisting, wishlist, shopping cart, OTP verification, profile management, ordertracking and cancellation, and Razorpay payment integration.
-
-                </p>
-                <div className="flex mt-5 md:mt-12 gap-6 ">
-                  <button className="flex-1 text-sm py-2 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700" onClick={() => window.location.href = "https://zuus.onrender.com"}>
-                    Live preview
-                  </button>
-                  <section className="flex justify-center items-center">
-                    <a
-                      href="https://github.com/irfan0374/Zuus-E-commerce"
-                      className="group flex justify-center p-2 rounded-md drop-shadow-xl bg-white text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:bg-white"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 15 15"
-                        className="w-5 text-black"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          fill-rule="evenodd"
-                          fill="currentColor"
-                          d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z"
-                        ></path>
-                      </svg>
-                      <span
-                        className="absolute opacity-0 group-hover:opacity-100 group-hover:text-white group-hover:text-sm group-hover:-translate-y-10 duration-700">
-                        GitHub
-                      </span>
-                    </a>
-                  </section>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row  gap-10 mt-11">
-              <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project2} className="transfrom hover:scale-125 duration-150 w-full h-auto rounded" />
-                <h3 className="text-xl md:text-2xl font-semibold mt-8">
-                  Weather Dashboard
-                </h3>
-                <p className="text-gray-400 text-sm mt-2">
-                  Developed a weather dashboard with a robust backend using Node.js, Express.js, PostgreSQL, and Prisma, featuring JWT user authentication and Open WeatherMap integration; the frontend, built with React and Vite, allows users to register, log in, search weather with Google Map suggestions, view detailed conditions, and manage favorite cities, all integrated with the Open WeatherMap API for current, forecast, and historical weather data.
-                </p>
-                <div className="flex mt-5 md:mt-12 gap-6 ">
-
-                  <section>
-                    <a
-                      href="https://github.com/irfan0374/viScan_weatherApp_frontend.git"
-                      className="group flex justify-center p-2 rounded-md drop-shadow-xl bg-white text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:bg-white"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 15 15"
-                        className="w-5 text-black"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          fill-rule="evenodd"
-                          fill="currentColor"
-                          d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z"
-                        ></path>
-                      </svg>
-                      <span
-                        className="absolute opacity-0 group-hover:opacity-100 group-hover:text-white group-hover:text-sm group-hover:-translate-y-10 duration-700"
-                      >
-                        GitHub
-                      </span>
-                    </a>
-
-                  </section>
-
-                </div>
-              </div>
-              <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <div className="flex justify-around">
-
-                  <img src={Project4i} className="transfrom hover:scale-125 duration-150 w-ful h-56 rounded" />
-                  <img src={Project4} className="transfrom hover:scale-125 duration-150 w-ful h-56 rounded" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-semibold mt-8">
-                  Digital Menu <span className="font-thin text-lg">(Cafe Oregano)</span>
-                </h3>
-                <p className="text-gray-400 text-sm mt-2">
-
-                  Developed a dynamic and interactive digital menu card for Cafe Oregano as part of <span className="font-semibold text-white">freelance work</span>, incorporating attractive designs and layouts to enhance the customer dining experience, using React.js, Tailwind CSS, DaisyUI, Material Tailwind, and Context API.                </p>
-
-              </div>
-
-            </div>
+          <h3 className="text-2xl font-bold text-white mb-3">Cafe Oregano</h3>
+          <p className="text-gray-400 text-sm leading-relaxed mb-6">
+            Designed an interactive digital menu system that improved order efficiency by 40%. Optimized state management to achieve a 35% reduction in load times.
+          </p>
+          <div className="flex flex-wrap gap-2 mb-8">
+            <span className="text-[10px] font-mono bg-blue-500/10 text-blue-400 px-2 py-1 rounded">React</span>
+            <span className="text-[10px] font-mono bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Context API</span>
+            <span className="text-[10px] font-mono bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Responsive</span>
           </div>
-        </section>
-        {/* Technoglies section */}
-        <section className=" py-6 md:py-10" id="technologies">
-          <div className="container m-auto px-4">
-            <h2 className="text-xl md:text-2xl font-semibold">Technologies</h2>
-            <div className="mt-9 md:mt-14">
-              <div>
-                <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">HTML</h2>
-                  <p className="text-sm text-gray-500">Advanced</p>
-                </div>
-                <span className="w-[80%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
-              </div>
-              <div className="mt-6 md:mt-8">
-                <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">CSS, Bootstrap</h2>
-                  <p className="text-sm text-gray-500">Advanced</p>
-                </div>
-                <span className="w-[75%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
-              </div>
-              <div className="mt-6 md:mt-8">
-                <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">
-                    JavaScript
-                  </h2>
-                  <p className=" text-sm text-gray-500">Advanced</p>
-                </div>
-                <span className="w-[90%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
-              </div>
-              <div className="mt-6 md:mt-8">
-                <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">
-                    node js
-                  </h2>
-                  <p className="text-sm text-gray-500">Advanced</p>
-                </div>
-                <span className="w-[95%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
-              </div>
-              <div className="mt-6 md:mt-8">
-                <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">
-                    MongoDB
-                  </h2>
-                  <p className="text-sm text-gray-500">Advanced</p>
-                </div>
-                <span className="w-[89%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
-              </div>
-              <div className="mt-6 md:mt-8">
-                <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">React</h2>
-                  <p className="text-sm text-gray-500">Advanced</p>
-                </div>
-                <span className="w-[90%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
-              </div>
-              <div className="mt-6 md:mt-8">
-                <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">React Native</h2>
-                  <p className="text-sm text-gray-500">Advanced</p>
-                </div>
-                <span className="w-[80%] h-1 md:h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
-              </div>
+          <div className="flex items-center gap-4 pt-6 border-t border-gray-800">
+            <div className="text-center">
+              <div className="text-xl font-bold text-white">40%</div>
+              <div className="text-[8px] text-gray-500 uppercase tracking-widest">Efficiency</div>
             </div>
-          </div>
-        </section>
-        {/* Additional skills section */}
-        <section>
-          <div className="container m-auto px-4 py-4 md:py-14">
-            <h2 className="text-xl md:text-2xl font-semibold">
-              Additional technologies and skills
-            </h2>
-            <div className=" sm:flex-row gap-4 md:gap-16 mt-7 md:mt-12 w-[80%] grid grid-cols-3 md:grid rows-1">
-              <div>
-                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  DSA
-                </p>
-              </div>
-              <div>
-                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  AWS
-                </p>
-              </div>
-              <div>
-                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  Figma
-                </p>
-              </div>
-              <div>
-                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  Git
-                </p>
-              </div>
-              <div>
-                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  Postman
-                </p>
-              </div>
-              <div>
-                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  Ajax
-                </p>
-              </div>
-              <div>
-                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  Jwt
-                </p>
-              </div>
-              <div>
-                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  Prisma
-                </p>
-              </div>
-              <div>
-                <p className="md:font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  Typescript
-                </p>
-              </div>
+            <div className="text-center">
+              <div className="text-xl font-bold text-white">35%</div>
+              <div className="text-[8px] text-gray-500 uppercase tracking-widest">Load Speed</div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-36 mt-4 sm:mt-6 w-[80%]">
-            </div>
-          </div>
-        </section>
-        <section className="py-2 md:py-3" id="aboutme">
-          <div className="container m-auto px-4">
-            <h2 className="text-xl md:text-2xl font-semibold">About me</h2>
-            <div className="mt-6 md:mt-12  relative before:absolute before:top-0 before:left-20 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
-              <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[73px]">
-                <h3 className="absolute left-0 text-md md:text-lg font-mono md:font-semibold">2019-22</h3>
-                <p className="text-sm md:text-lg">
-                  Graduated Bachelor degree (Co-opertative arsts and science College) specified with computer application
-                </p>
-              </div>
-              <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[73px]">
-                <h3 className="absolute left-0 text-md md:text-lg font-mono md:font-semibold">2023-24</h3>
-                <p className="text-sm md:text-lg">
-                  I became more interested in problem-solving and technology, leading me to delve into both front-end and back-end development using the MERN stack.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* contact card start */}
-        <section className="container m-auto px-4 md:py-8" id="contact">
-          <h1 className="text-xl md:text-2xl font-semibold ">
-            Get in touch
-          </h1>
-          <div className=" border mt-5 rounded-3xl p-4 md:p-6">
-            <div>
-              <p className="pt-3 md:pt-5 pl-2 font-mono text-sm md:text-lg">
-                I'm currently avaliable to take on new projects. So feel free to sent me a message about anything that you want to run past me. You can contact anytime at 24/7
-              </p>
-              <div>
-                <ul className="flex flex-col gap-5 pl-4 pt-5">
-                  <div className="flex">
-                    <li className="bg-white w-8 md:w-12 h-8 md:h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl">
-                      <div className="flex">
-                        <img src={location} className="w-5 md:w-8 h-8" alt="" />
-                      </div>
-                    </li>
-                    <p className="pl-4 text-gray-400 text-sm md:text-lg font-semibold">Kannur,India 670304</p>
-                  </div>
-                  <div className="flex">
-                    <li className="bg-white w-8 md:w-12 h-8 md:h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl">
-                      <div className="flex">
-                        <img src={email} className="w-5 md:w-8 h-8" alt="" />
-                      </div>
-                    </li>
-                    <p className="pl-4 text-gray-400 text-sm md:text-lg font-semibold">irfan188iqbal@gmail.com</p>
-                  </div>
-                  <div className="flex">
-                    <li className="bg-white w-8 md:w-12 h-8 md:h-12 first-letter:rounded-2xl flex justify-center items-center rounded-3xl animate-bounce">
-                      <div className="flex">
-                        <img src={call} className="w-5 md:w-8 h-8 " alt="" />
-
-                      </div>
-                    </li>
-                    <p className="pl-4 text-gray-400  text-sm md:text-lg font-semibold">+91 8139024188</p>
-                  </div>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* contact card end */}
-
-      </main>
-      <footer>
-        <div className="container m-auto flex justify-between px-4 py-6">
-
-          <div>
-            <ul className="flex gap-6">
-              <h3 className="text-gray-500 font-serif text-sm">
-                Feel free to follow me</h3>
-              <li>
-                <a href="https://leetcode.com/Irfan374/">
-                  <img src={leetcode} className="w-7  tranform hover:scale-125  " />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/muhammedirfaniqbal/">
-                  <img src={LinkedIn} className="  tranform hover:scale-125  w-7" />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/irfan0374">
-                  <img src={github} className=" tranform hover:scale-125 w-9" />
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
+      </div>
+
+      {/* SevenSky Real Estate */}
+      <div className="group relative bg-[#111] border border-gray-800 rounded-[2rem] overflow-hidden hover:border-purple-500/50 transition-all">
+        <div className="p-8">
+          <div className="flex justify-between items-start mb-6">
+            <div className="p-3 bg-purple-500/10 rounded-xl text-purple-500">
+              <MapPin size={24} />
+            </div>
+          </div>
+          <h3 className="text-2xl font-bold text-white mb-3">SevenSky</h3>
+          <p className="text-gray-400 text-sm leading-relaxed mb-6">
+            MERN-stack marketplace supporting 1,000+ concurrent sessions with Google Maps API and real-time messaging.
+          </p>
+          <div className="flex flex-wrap gap-2 mb-8">
+            <span className="text-[10px] font-mono bg-purple-500/10 text-purple-400 px-2 py-1 rounded">MERN Stack</span>
+            <span className="text-[10px] font-mono bg-purple-500/10 text-purple-400 px-2 py-1 rounded">Socket.io</span>
+          </div>
+          <div className="flex items-center gap-4 pt-6 border-t border-gray-800">
+            <div className="text-center">
+              <div className="text-xl font-bold text-white">1k+</div>
+              <div className="text-[8px] text-gray-500 uppercase tracking-widest">Sessions</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Zuus E-Commerce */}
+      <div className="group relative bg-[#111] border border-gray-800 rounded-[2rem] overflow-hidden hover:border-cyan-500/50 transition-all">
+        <div className="p-8">
+          <div className="flex justify-between items-start mb-6">
+            <div className="p-3 bg-cyan-500/10 rounded-xl text-cyan-500">
+              <Briefcase size={24} />
+            </div>
+          </div>
+          <h3 className="text-2xl font-bold text-white mb-3">Zuus Platform</h3>
+          <p className="text-gray-400 text-sm leading-relaxed mb-6">
+            Custom administrative dashboard for inventory and coupon management with secure JWT-based workflows.
+          </p>
+          <div className="flex flex-wrap gap-2 mb-8">
+            <span className="text-[10px] font-mono bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded">Node.js</span>
+            <span className="text-[10px] font-mono bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded">AWS</span>
+            <span className="text-[10px] font-mono bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded">JWT</span>
+          </div>
+          <div className="flex items-center gap-4 pt-6 border-t border-gray-800">
+            <div className="text-center">
+              <div className="text-xl font-bold text-white">Secure</div>
+              <div className="text-[8px] text-gray-500 uppercase tracking-widest">Workflows</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24 px-6 bg-[#0c0c0c]">
+        <div className="max-w-5xl mx-auto bg-gradient-to-b from-[#111] to-black border border-gray-800 rounded-[3rem] p-12 md:p-16 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Let's Connect</h2>
+          <p className="text-gray-400 mb-12 max-w-md mx-auto">Available for enterprise roles in the UAE or high-end freelance consulting worldwide.</p>
+          
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <a href="https://wa.me/971551345244" target="_blank" rel="noreferrer" className="flex items-center gap-6 text-left p-6 bg-white/5 rounded-2xl border border-gray-800 hover:border-green-500/50 transition-all group">
+              <MessageCircle className="text-green-500 group-hover:scale-110 transition" size={32} />
+              <div>
+                <p className="text-xs text-gray-500 uppercase font-bold tracking-widest">WhatsApp</p>
+                <p className="text-white font-medium">+971 551345244</p>
+                <span className="text-[10px] text-green-400 font-bold">CHAT NOW</span>
+              </div>
+            </a>
+            <a href="mailto:irfan188iqbal@gmail.com" className="flex items-center gap-6 text-left p-6 bg-white/5 rounded-2xl border border-gray-800 hover:border-blue-500/50 transition-all group">
+              <Mail className="text-blue-500 group-hover:scale-110 transition" size={32} />
+              <div>
+                <p className="text-xs text-gray-500 uppercase font-bold tracking-widest">Email Me</p>
+                <p className="text-white font-medium text-sm">irfan188iqbal@gmail.com</p>
+              </div>
+            </a>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-gray-900">
+            <div className="flex items-center gap-2 text-gray-500 text-sm">
+              <MapPin size={18} className="text-blue-500" />
+              Dubai, UAE (Available to join immediately)
+            </div>
+            <div className="flex gap-8">
+              <a href="https://github.com/irfan0374" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-white transition transform hover:scale-110"><Github size={28} /></a>
+              <a href="https://www.linkedin.com/in/muhammedirfaniqbal/" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-white transition transform hover:scale-110"><Linkedin size={28} /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="py-12 text-center text-gray-600 text-xs tracking-widest uppercase">
+        © 2026 MUHAMMED IRFAN — Full-Stack Specialist
       </footer>
-      {
-        scrolling && (
-          <button className="fixed block right-8 bottom-0 w-24" onClick={() => {
-            window.scrollTo(0, 0);
-          }}>
-            <img src={ArrowDown} />
-          </button>
-        )
-      }
     </div>
   );
-}
-export default App;
+};
+
+export default Portfolio;
