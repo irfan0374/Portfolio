@@ -3,11 +3,11 @@ import {
   Github, Linkedin, Mail, Phone, MapPin, ExternalLink, 
   Code2, Database, Cloud, Layout, Terminal, Award, 
   Download, ShieldCheck, Zap, Layers, Users, MessageCircle,
-  Briefcase, Clock, CheckCircle2
+  Briefcase, Clock, CheckCircle2,Calendar
 } from 'lucide-react';
 import profile from './assets/profile3.jpg'
 import Technology from './component/Technology.jsx';
-import cv from './assets/muhammed_irfan_full_stack_developer.pdf';
+import cv from './assets/Full_stack_developer_Irfan1.pdf';
 
 const Portfolio = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,9 +33,6 @@ const Portfolio = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-{/* Hero Section */}
-     {/* Hero Section */}
       <section className="relative pt-40 pb-8 px-6 overflow-hidden min-h-screen flex items-center">
         {/* Animated Gradient Mesh Background */}
         <div className="absolute inset-0 -z-10">
@@ -80,12 +77,12 @@ const Portfolio = () => {
             {/* Stats Bar - UAE Professional Standard */}
             <div className="flex gap-8 py-6 border-y border-gray-800">
               <div>
-                <div className="text-3xl font-bold text-white">2+</div>
+                <div className="text-3xl font-bold text-white">3+</div>
                 <div className="text-xs text-gray-500 uppercase tracking-wider">Years Exp</div>
               </div>
              
               <div>
-                <div className="text-3xl font-bold text-white">10+</div>
+                <div className="text-3xl font-bold text-white">12+</div>
                 <div className="text-xs text-gray-500 uppercase tracking-wider">Projects</div>
               </div>
             </div>
@@ -302,46 +299,78 @@ const Portfolio = () => {
       </section>
 
       {/* Professional Experience Section */}
-      <section id="experience" className="py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-16 flex items-center gap-4">
-            <Award className="text-blue-500" /> Career Milestones
-          </h2>
-          <div className="space-y-16">
-            <div className="relative pl-12 border-l-2 border-gray-800 group">
-              <div className="absolute w-5 h-5 bg-blue-600 rounded-full -left-[11px] top-0 group-hover:scale-125 transition shadow-[0_0_15px_rgba(37,99,235,0.5)]"></div>
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-white">Front-End Team Lead</h3>
-                  <p className="text-blue-400 font-bold">ibadvisory (Remote,India)</p>
-                </div>
-                <span className="text-xs font-mono bg-white/5 px-3 py-1 rounded text-gray-500">Nov 2025 - Present</span>
-              </div>
-              <ul className="grid gap-3 text-gray-400">
-                <li>• Architected Virtual Yoga Studio for 500+ users using Agora SDK.</li>
-                <li>• Automated billing via Razorpay Subscription API and webhooks.</li>
-                <li>• Deployed Msg91 MFA achieving 99% delivery success rate.</li>
-              </ul>
-            </div>
+    <section id="experience" className="py-24 px-6">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl font-bold text-white mb-16 flex items-center gap-4">
+      <Award className="text-blue-500" /> Career Milestones
+    </h2>
 
-            <div className="relative pl-12 border-l-2 border-gray-800 group">
-              <div className="absolute w-5 h-5 bg-gray-800 rounded-full -left-[11px] top-0 group-hover:bg-blue-600 transition"></div>
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-white">Full Stack Developer</h3>
-                  <p className="text-blue-400 font-bold">Finisso Technologies (India)</p>
-                </div>
-                <span className="text-xs font-mono bg-white/5 px-3 py-1 rounded text-gray-500">2024 - 2025</span>
-              </div>
-              <ul className="grid gap-3 text-gray-400">
-                <li>• Engineered ERP modules (HRM, Accounts, Inventory) using PostgreSQL.</li>
-                <li>• Improved financial reporting speed by 30% via dashboards.</li>
-                <li>• Collaborated with clients in UAE, Oman, and Bahrain on system design.</li>
-              </ul>
-            </div>
+    <div className="space-y-16">
+
+      {/* IBAdvisory */}
+      <div className="relative pl-12 border-l-2 border-gray-800 group">
+        <div className="absolute w-5 h-5 bg-blue-600 rounded-full -left-[11px] top-0 group-hover:scale-125 transition shadow-[0_0_15px_rgba(37,99,235,0.5)]"></div>
+        <div className="flex justify-between items-start mb-4">
+          <div>
+            <h3 className="text-2xl font-bold text-white">Front-End Team Lead</h3>
+            <p className="text-blue-400 font-bold">IBAdvisory (Remote, India)</p>
           </div>
+          <span className="text-xs font-mono bg-white/5 px-3 py-1 rounded text-gray-500">
+            Nov 2025 - Present
+          </span>
         </div>
-      </section>
+        <ul className="grid gap-3 text-gray-400">
+          <li>• Architected Virtual Yoga Studio for 500+ users using Agora SDK.</li>
+          <li>• Automated billing via Razorpay Subscription API and webhooks.</li>
+          <li>• Deployed Msg91 MFA achieving 99% delivery success rate.</li>
+        </ul>
+      </div>
+
+      
+
+      {/* Finisso Technologies */}
+      <div className="relative pl-12 border-l-2 border-gray-800 group">
+        <div className="absolute w-5 h-5 bg-gray-800 rounded-full -left-[11px] top-0 group-hover:bg-blue-600 transition"></div>
+        <div className="flex justify-between items-start mb-4">
+          <div>
+            <h3 className="text-2xl font-bold text-white">Full Stack Developer</h3>
+            <p className="text-blue-400 font-bold">Finisso Technologies (India,Kochi)</p>
+          </div>
+          <span className="text-xs font-mono bg-white/5 px-3 py-1 rounded text-gray-500">
+            Sep 2024 - Nov 2025
+          </span>
+        </div>
+        <ul className="grid gap-3 text-gray-400">
+          <li>• Engineered ERP modules (HRM, Accounts, Inventory) using PostgreSQL.</li>
+          <li>• Improved financial reporting speed by 30% via dashboards.</li>
+          <li>• Collaborated with clients in UAE, Oman, and Bahrain on system design.</li>
+        </ul>
+      </div>
+
+      {/* Lue IT Solution */}
+      <div className="relative pl-12 border-l-2 border-gray-800 group">
+        <div className="absolute w-5 h-5 bg-gray-800 rounded-full -left-[11px] top-0 group-hover:bg-blue-600 transition"></div>
+        <div className="flex justify-between items-start mb-4">
+          <div>
+            <h3 className="text-2xl font-bold text-white">Full Stack Developer</h3>
+            <p className="text-blue-400 font-bold">Lue IT Solution (India,Calicut)</p>
+          </div>
+          <span className="text-xs font-mono bg-white/5 px-3 py-1 rounded text-gray-500">
+            Jan 2023 - Aug 2024
+          </span>
+        </div>
+        <ul className="grid gap-3 text-gray-400">
+          <li>• Built scalable production apps using Node.js, React, AWS, and Redux.</li>
+          <li>• Integrated Socket.io for real-time notifications increasing engagement by 45%.</li>
+          <li>• Engineered secure Razorpay payment workflows.</li>
+          <li>• Collaborated with UI/UX teams to optimize interface flows and user experience.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       {/* Featured Projects Section */}
 <section id="projects" className="py-24 px-6">
@@ -416,6 +445,39 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+
+      {/* School Timetable Generator */}
+<div className="group relative bg-[#111] border border-gray-800 rounded-[2rem] overflow-hidden hover:border-indigo-500/50 transition-all">
+  <div className="p-8">
+    <div className="flex justify-between items-start mb-6">
+      <div className="p-3 bg-indigo-500/10 rounded-xl text-indigo-500">
+        <Calendar size={24} />
+      </div>
+      <span className="text-[10px] font-bold bg-white/5 px-2 py-1 rounded text-gray-500 uppercase tracking-tighter">
+        Logic Heavy
+      </span>
+    </div>
+    <h3 className="text-2xl font-bold text-white mb-3">Timetable Architect</h3>
+    <p className="text-gray-400 text-sm leading-relaxed mb-6">
+      Automated scheduling system that resolves teacher-student conflicts using a custom constraint-satisfaction algorithm. Reduced manual scheduling time by 90%.
+    </p>
+    <div className="flex flex-wrap gap-2 mb-8">
+      <span className="text-[10px] font-mono bg-indigo-500/10 text-indigo-400 px-2 py-1 rounded">JavaScript</span>
+      <span className="text-[10px] font-mono bg-indigo-500/10 text-indigo-400 px-2 py-1 rounded">Algorithms</span>
+      <span className="text-[10px] font-mono bg-indigo-500/10 text-indigo-400 px-2 py-1 rounded">JSON</span>
+    </div>
+    <div className="flex items-center gap-4 pt-6 border-t border-gray-800">
+      <div className="text-center">
+        <div className="text-xl font-bold text-white">90%</div>
+        <div className="text-[8px] text-gray-500 uppercase tracking-widest">Time Saved</div>
+      </div>
+      <div className="text-center">
+        <div className="text-xl font-bold text-white">Zero</div>
+        <div className="text-[8px] text-gray-500 uppercase tracking-widest">Conflicts</div>
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* Zuus E-Commerce */}
       <div className="group relative bg-[#111] border border-gray-800 rounded-[2rem] overflow-hidden hover:border-cyan-500/50 transition-all">
