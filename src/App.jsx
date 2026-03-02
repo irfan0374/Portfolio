@@ -66,7 +66,7 @@ const Portfolio = () => {
             
             <div className="relative">
               <p className="text-xl md:text-2xl text-gray-300 font-light">
-                Full-Stack Developer & <span className="text-white font-bold border-b-2 border-blue-600">Front-End Team Lead</span>
+                Full-Stack Developer 
               </p>
             </div>
             
