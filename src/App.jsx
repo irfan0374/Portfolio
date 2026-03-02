@@ -429,7 +429,7 @@ const Portfolio = () => {
               <MapPin size={24} />
             </div>
           </div>
-          <h3 className="text-2xl font-bold text-white mb-3">SevenSky</h3>
+          <h3 className="text-2xl font-bold text-white mb-3">Real Estate Platform -SevenSky</h3>
           <p className="text-gray-400 text-sm leading-relaxed mb-6">
             MERN-stack marketplace supporting 1,000+ concurrent sessions with Google Maps API and real-time messaging.
           </p>
@@ -457,7 +457,7 @@ const Portfolio = () => {
         Logic Heavy
       </span>
     </div>
-    <h3 className="text-2xl font-bold text-white mb-3">Timetable Architect</h3>
+    <h3 className="text-2xl font-bold text-white mb-3">Timetable Generator</h3>
     <p className="text-gray-400 text-sm leading-relaxed mb-6">
       Automated scheduling system that resolves teacher-student conflicts using a custom constraint-satisfaction algorithm. Reduced manual scheduling time by 90%.
     </p>
@@ -487,7 +487,7 @@ const Portfolio = () => {
               <Briefcase size={24} />
             </div>
           </div>
-          <h3 className="text-2xl font-bold text-white mb-3">Zuus Platform</h3>
+          <h3 className="text-2xl font-bold text-white mb-3">E-commerce Platform -Zuus</h3>
           <p className="text-gray-400 text-sm leading-relaxed mb-6">
             Custom administrative dashboard for inventory and coupon management with secure JWT-based workflows.
           </p>
