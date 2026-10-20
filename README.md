@@ -1,8 +1,20 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio of Muhammed Irfan UV, Full Stack Developer. Next.js (App Router), TypeScript, Tailwind CSS v4, GSAP + Lenis for motion, Resend for the contact form.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+pnpm install
+cp .env.example .env.local   # add RESEND_API_KEY to enable the contact form
+pnpm dev                     # http://localhost:3000
+```
+
+- Content (text, projects, jobs, skills): `src/data/site.ts`
+- Images: `public/images/`; CV download: `public/Muhammed_Irfan_UV_CV.docx`
+- Theme colours (dark + light): `src/app/globals.css`
+- Animations: `src/components/Animations.tsx`
+
+## Deploy
+
+Vercel, framework preset **Next.js**. Set `RESEND_API_KEY` and `CONTACT_TO_EMAIL` in the project's environment variables.

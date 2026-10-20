@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Theme tokens. Dark is the default; [data-theme="light"] on <html> switches. */
+:root {
+  --bg: #0e0e0e;
+  --surface: #171717;
+  --surface-2: #1f1f1f;
+  --border: #2a2a2a;
+  --text: #ededed;
+  --muted: #a1a1aa;
+  --accent: #a3e635;
+  --accent-ink: #0e0e0e;
+  --accent-soft: rgb(163 230 53 / 0.12);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --surface-2: #f4f4f3;
+  --border: #e5e5e3;
+  --text: #111111;
+  --muted: #57575c;
+  --accent: #4d7c0f;
+  --accent-ink: #ffffff;
+  --accent-soft: rgb(77 124 15 / 0.1);
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-fg: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+/* Elements animated by GSAP start hidden only when JS is running. */
+.js [data-reveal],
+.js [data-card],
+.js [data-word] {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal],
+  .js [data-card],
+  .js [data-word] {
+    opacity: 1;
+  }
+}
+
+.pulse-dot {
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 var(--accent-soft);
+  }
+  50% {
+    box-shadow: 0 0 0 6px var(--accent-soft);
+  }
+}
+
+/* Theme toggle shows the icon of the mode you would switch to. */
+.theme-icon-moon {
+  display: none;
+}
+[data-theme="light"] .theme-icon-sun {
+  display: none;
+}
+[data-theme="light"] .theme-icon-moon {
+  display: block;
+}
