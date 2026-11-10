@@ -67,6 +67,16 @@ export const projects: Project[] = [
     imageAlt: "POS app on a restaurant counter tablet with an order tab and receipt preview",
   },
   {
+    name: "Clipwise",
+    label: "AI",
+    kind: "Open beta",
+    description:
+      "AI video generator that turns an idea into a ready-to-post short: it writes the script, voices it, animates each scene and adds word-synced captions, rendered in 9:16 at 1080p for Reels, Shorts and TikTok.",
+    tags: ["TypeScript", "Gemini", "ElevenLabs", "Remotion"],
+    image: "/images/clipwise.jpg",
+    imageAlt: "Clipwise landing page with a live video preview, synced captions and render progress",
+  },
+  {
     name: "Make Marriage",
     label: "SaaS",
     kind: "Web app",
@@ -76,16 +86,6 @@ export const projects: Project[] = [
     image: "/images/make-marriage.jpg",
     imageAlt: "Make Marriage landing page with RSVP summary and a personal family invite",
     link: { href: "https://make-marriage.vercel.app", label: "Live" },
-  },
-  {
-    name: "Clipwise",
-    label: "AI",
-    kind: "Open beta",
-    description:
-      "AI video generator that turns an idea into a ready-to-post short: it writes the script, voices it, animates each scene and adds word-synced captions, rendered in 9:16 at 1080p for Reels, Shorts and TikTok.",
-    tags: ["TypeScript", "Gemini", "ElevenLabs", "Remotion"],
-    image: "/images/clipwise.jpg",
-    imageAlt: "Clipwise landing page with a live video preview, synced captions and render progress",
   },
   {
     name: "Casalily",
@@ -133,7 +133,7 @@ export const experience = [
     current: true,
   },
   {
-    role: "Front-End Team Lead",
+    role: "Front-End Developer",
     company: "iBadvisory",
     dates: "Nov 2025 – Mar 2026",
     location: "Remote",
