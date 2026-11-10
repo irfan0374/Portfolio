@@ -159,16 +159,6 @@ function ProjectCard({ p }: { p: Project }) {
           />
         </div>
       )}
-      {p.terminal && (
-        <div className="rounded-xl border border-line bg-bg p-5 font-mono text-sm">
-          <p className="flex items-center justify-between gap-4 rounded-lg border border-line px-4 py-3">
-            <span className="text-muted">&gt; {p.terminal}</span>
-            <span className="flex items-center gap-2 text-xs text-accent">
-              <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-accent" /> rendering
-            </span>
-          </p>
-        </div>
-      )}
     </article>
   );
 }

@@ -54,7 +54,6 @@ export type Project = {
   imageAlt?: string;
   link?: { href: string; label: string };
   featured?: boolean;
-  terminal?: string;
 };
 
 export const projects: Project[] = [
@@ -76,26 +75,29 @@ export const projects: Project[] = [
     description:
       "Wedding planning platform for guest lists and RSVP, expense tracking, vendors, tasks and a public wedding website.",
     tags: ["Next.js", "TypeScript", "MongoDB", "Resend", "Cloudflare R2"],
-    image: "/images/make-marriage.jpg",
-    imageAlt: "Make Marriage dashboard with RSVP charts",
+    image: "/images/make-marriage.webp",
+    imageAlt: "Make Marriage landing page with RSVP summary and a personal family invite",
     link: { href: "https://make-marriage.vercel.app", label: "Live" },
   },
   {
     name: "Clipwise",
     label: "AI",
-    kind: "Video engine",
+    kind: "Open beta",
     description:
-      "Turns a topic into a 30–60 second explainer video with an LLM-written script, AI voice-over and word-synced captions, plus a dashboard to track each video.",
+      "AI video generator that turns an idea into a ready-to-post short: it writes the script, voices it, animates each scene and adds word-synced captions, rendered in 9:16 at 1080p for Reels, Shorts and TikTok.",
     tags: ["TypeScript", "Gemini", "ElevenLabs", "Remotion"],
-    terminal: "render_video()",
+    image: "/images/clipwise.webp",
+    imageAlt: "Clipwise landing page with a live video preview, synced captions and render progress",
   },
   {
-    name: "Casa Lilly",
+    name: "Casalily",
     label: "Freelance",
     kind: "E-commerce",
     description:
-      "Storefront and mobile-first admin panel for an online retail brand: catalogue, collections, banners and product videos.",
+      "Storefront and mobile-first admin panel for a Dubai flower shop: catalogue, collections, banners, product videos and WhatsApp ordering.",
     tags: ["React", "TypeScript", "FastAPI", "PostgreSQL"],
+    image: "/images/casalily.webp",
+    imageAlt: "Casalily storefront with a flower bicycle hero banner",
     link: { href: "https://frontend-irfaans-projects.vercel.app", label: "Live" },
   },
   {
