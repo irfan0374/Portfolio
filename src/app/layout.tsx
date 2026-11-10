@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 // Runs before paint: applies the saved theme and marks JS as available, so nothing flashes.
-const bootScript = `try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}document.documentElement.classList.add('js');`;
+const bootScript = `try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}document.documentElement.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion');`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

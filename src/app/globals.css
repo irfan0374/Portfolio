@@ -103,3 +103,45 @@ html.lenis body {
 [data-theme="light"] .theme-icon-moon {
   display: block;
 }
+
+/* Projects pile: plain list by default, pinned stack when motion is on. */
+.pile-title {
+  display: none;
+}
+.pile-list {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  padding: 0 1.25rem 6rem;
+}
+.motion [data-pile] {
+  height: calc(var(--pile-count) * 75svh + 100svh);
+}
+.motion [data-pile-stage] {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 100svh;
+  align-items: center;
+  justify-content: center;
+}
+.motion .pile-title {
+  display: block;
+}
+.motion .pile-list {
+  padding: 0;
+}
+.motion .pile-list > li {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+  pointer-events: none;
+}
+.motion [data-pile-card] {
+  pointer-events: auto;
+  transform: translateY(110vh);
+  will-change: transform;
+}

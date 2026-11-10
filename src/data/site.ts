@@ -50,10 +50,9 @@ export type Project = {
   kind: string;
   description: string;
   tags: string[];
-  image?: string;
-  imageAlt?: string;
+  image: string;
+  imageAlt: string;
   link?: { href: string; label: string };
-  featured?: boolean;
 };
 
 export const projects: Project[] = [
@@ -65,8 +64,7 @@ export const projects: Project[] = [
       "Offline desktop POS for restaurants and retail shops, used by 4+ restaurants. Touch ordering, ESC/POS thermal receipt printing and cash-drawer control; the retail edition adds barcode checkout and VAT.",
     tags: ["Electron", "React", "TypeScript", "SQLite", "ESC/POS"],
     image: "/images/pos.jpg",
-    imageAlt: "POS app running on a tablet in a restaurant",
-    featured: true,
+    imageAlt: "POS app on a restaurant counter tablet with an order tab and receipt preview",
   },
   {
     name: "Make Marriage",
@@ -75,7 +73,7 @@ export const projects: Project[] = [
     description:
       "Wedding planning platform for guest lists and RSVP, expense tracking, vendors, tasks and a public wedding website.",
     tags: ["Next.js", "TypeScript", "MongoDB", "Resend", "Cloudflare R2"],
-    image: "/images/make-marriage.webp",
+    image: "/images/make-marriage.jpg",
     imageAlt: "Make Marriage landing page with RSVP summary and a personal family invite",
     link: { href: "https://make-marriage.vercel.app", label: "Live" },
   },
@@ -86,7 +84,7 @@ export const projects: Project[] = [
     description:
       "AI video generator that turns an idea into a ready-to-post short: it writes the script, voices it, animates each scene and adds word-synced captions, rendered in 9:16 at 1080p for Reels, Shorts and TikTok.",
     tags: ["TypeScript", "Gemini", "ElevenLabs", "Remotion"],
-    image: "/images/clipwise.webp",
+    image: "/images/clipwise.jpg",
     imageAlt: "Clipwise landing page with a live video preview, synced captions and render progress",
   },
   {
@@ -96,9 +94,19 @@ export const projects: Project[] = [
     description:
       "Storefront and mobile-first admin panel for a Dubai flower shop: catalogue, collections, banners, product videos and WhatsApp ordering.",
     tags: ["React", "TypeScript", "FastAPI", "PostgreSQL"],
-    image: "/images/casalily.webp",
+    image: "/images/casalily.jpg",
     imageAlt: "Casalily storefront with a flower bicycle hero banner",
     link: { href: "https://frontend-irfaans-projects.vercel.app", label: "Live" },
+  },
+  {
+    name: "MRA",
+    label: "Freelance",
+    kind: "Restaurant website",
+    description:
+      "Dark, image-led website for a restaurant, with home, about, menu and contact pages that work on every screen size.",
+    tags: ["React", "Vite", "Responsive UI"],
+    image: "/images/mra.jpg",
+    imageAlt: "MRA restaurant website hero with chopsticks lifting crayfish",
   },
   {
     name: "School Timetable Generator",
@@ -107,6 +115,8 @@ export const projects: Project[] = [
     description:
       "Generates conflict-free school timetables from teacher availability and room capacity, with a drag-and-drop editor that cut planning time by 70%.",
     tags: ["React", "Django", "DRF"],
+    image: "/images/timetable.jpg",
+    imageAlt: "School Timetable Generator class manager screen on a laptop",
   },
 ];
 

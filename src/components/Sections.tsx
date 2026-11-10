@@ -112,18 +112,32 @@ export function About() {
   );
 }
 
-function ProjectCard({ p }: { p: Project }) {
+// Resting tilt of each card in the pile, in degrees.
+const pileTilt = [-4, 3, -2, 4, -3, 2];
+
+function ProjectCard({ p, index }: { p: Project; index: number }) {
   return (
     <article
-      data-card
-      data-tilt
-      className={`group flex flex-col gap-6 rounded-2xl border border-line bg-surface p-6 transition-[border-color,box-shadow] duration-300 hover:border-accent/60 hover:shadow-[0_8px_40px_-12px_var(--accent-soft)] ${
-        p.featured ? "md:col-span-2 md:grid md:grid-cols-[1fr_1.1fr] md:items-center md:gap-10 md:p-8" : ""
-      }`}
+      data-pile-card
+      data-rot={pileTilt[index % pileTilt.length]}
+      className="w-[min(88vw,560px,calc((100svh-260px)*1.6))] rounded-[22px] border border-line bg-surface p-3 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.6)]"
     >
-      <div className="flex flex-col">
-        <div className="mb-4 flex items-center justify-between font-mono text-xs">
-          <span className="rounded border border-accent/40 bg-accent-soft px-2 py-0.5 text-accent">{p.label}</span>
+      <div data-pile-media className="relative aspect-[16/10] overflow-hidden rounded-[14px] bg-surface-2">
+        <Image
+          data-pile-img
+          src={p.image}
+          alt={p.imageAlt}
+          fill
+          sizes="(max-width: 640px) 88vw, 560px"
+          className="object-cover"
+        />
+      </div>
+      <div className="px-2 pb-2 pt-4">
+        <div className="flex items-center justify-between font-mono text-xs">
+          <span className="flex items-center gap-3">
+            <span className="text-accent">{String(index + 1).padStart(2, "0")}</span>
+            <span className="rounded border border-accent/40 bg-accent-soft px-2 py-0.5 text-accent">{p.label}</span>
+          </span>
           {p.link ? (
             <a
               href={p.link.href}
@@ -137,9 +151,9 @@ function ProjectCard({ p }: { p: Project }) {
             <span className="text-muted">{p.kind}</span>
           )}
         </div>
-        <h3 className={`font-semibold tracking-tight ${p.featured ? "text-3xl" : "text-2xl"}`}>{p.name}</h3>
-        <p className="mt-3 leading-relaxed text-muted">{p.description}</p>
-        <div className="mt-5 flex flex-wrap gap-2">
+        <h3 className="mt-3 text-2xl font-semibold tracking-tight">{p.name}</h3>
+        <p className="mt-2 text-[15px] leading-relaxed text-muted">{p.description}</p>
+        <div className="mt-4 flex flex-wrap gap-2">
           {p.tags.map((t) => (
             <span key={t} className="rounded-md border border-line bg-surface-2 px-2 py-1 font-mono text-[11px] text-muted">
               {t}
@@ -147,30 +161,34 @@ function ProjectCard({ p }: { p: Project }) {
           ))}
         </div>
       </div>
-
-      {p.image && (
-        <div className="overflow-hidden rounded-xl border border-line">
-          <Image
-            src={p.image}
-            alt={p.imageAlt ?? p.name}
-            width={1400}
-            height={764}
-            className="aspect-[16/9] h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
-      )}
     </article>
   );
 }
 
+// The section pins while the cards slide up one by one and pile on top of each other
+// (see Animations). Without motion it falls back to a plain list.
 export function Projects() {
   return (
-    <section id="projects" className="mx-auto max-w-6xl border-t border-line px-5 py-24 md:px-8">
-      <SectionLabel index="02" title="Selected projects" aside="Built and shipped" />
-      <div data-cards className="grid gap-5 md:grid-cols-2">
-        {projects.map((p) => (
-          <ProjectCard key={p.name} p={p} />
-        ))}
+    <section id="projects" className="border-t border-line">
+      <div className="mx-auto max-w-6xl px-5 pt-24 md:px-8">
+        <SectionLabel index="02" title="Selected projects" aside="Built and shipped" />
+      </div>
+      <div data-pile style={{ "--pile-count": projects.length } as React.CSSProperties}>
+        <div data-pile-stage className="overflow-hidden">
+          <h2
+            aria-hidden
+            className="pile-title select-none whitespace-nowrap text-center text-[19vw] font-semibold uppercase leading-none tracking-tighter text-accent"
+          >
+            Projects
+          </h2>
+          <ul className="pile-list">
+            {projects.map((p, i) => (
+              <li key={p.name}>
+                <ProjectCard p={p} index={i} />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

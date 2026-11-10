@@ -73,6 +73,28 @@ export function Animations() {
           },
         );
       });
+
+      // Project pile: each card slides up and lands tilted on the one before; its
+      // image is unveiled while zooming out, then drifts as later cards arrive.
+      gsap.utils.toArray<HTMLElement>("[data-pile]").forEach((pile) => {
+        const cards = gsap.utils.toArray<HTMLElement>("[data-pile-card]", pile);
+        const tl = gsap.timeline({
+          defaults: { ease: "power2.out", duration: 1 },
+          scrollTrigger: { trigger: pile, start: "top top", end: "bottom bottom", scrub: 0.6 },
+        });
+        cards.forEach((card, i) => {
+          const rot = Number(card.dataset.rot);
+          const media = card.querySelector("[data-pile-media]");
+          const img = card.querySelector("[data-pile-img]");
+          tl.fromTo(card, { y: () => window.innerHeight * 1.1, rotation: rot * 3 }, { y: 0, rotation: rot }, i);
+          tl.fromTo(media, { clipPath: "inset(35% 0% 35% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)" }, i + 0.15);
+          tl.fromTo(img, { scale: 1.35, yPercent: 8 }, { scale: 1.12, yPercent: 0 }, i + 0.15);
+          if (i < cards.length - 1) {
+            tl.to(img, { yPercent: -6, ease: "none", duration: cards.length - 1 - i }, i + 1.15);
+          }
+        });
+        tl.to({}, { duration: 0.5 });
+      });
     });
 
     // Gentle tilt toward the cursor on cards (desktop pointers only).
