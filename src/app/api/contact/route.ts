@@ -30,6 +30,8 @@ export async function POST(req: Request) {
   });
 
   if (error) {
+    // Shows in Vercel's runtime logs, e.g. an invalid key or an unverified recipient.
+    console.error("Resend send failed:", error.name, error.message);
     return Response.json({ error: "Could not send right now. Please email me directly." }, { status: 502 });
   }
   return Response.json({ ok: true });
